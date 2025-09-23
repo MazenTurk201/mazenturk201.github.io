@@ -112,6 +112,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* margin-top: 100px; */
 }
 
 footer {
@@ -145,10 +146,6 @@ nav {
     background-color: var(--main-color) !important;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-}
-
-main {
-    margin-top: 100px;
 }
 
 .container {
@@ -385,4 +382,11 @@ section {
         pointer-events: auto;
         transform: translateY(0);
     }
+}
+
+
+.whiteSpace {
+    background-color: #fff;
+    width: 100vh;
+    height: 30vh;
 }
