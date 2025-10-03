@@ -1,7 +1,7 @@
 /* Colors Var */
 :root {
+    --main-color: #501c10;
     --hover: color-mix(in srgb, var(--main-color), white 20%);
-    --main-color: #6610f2;
     --bg-main: #000;
     --text-color: #fff;
 }
@@ -82,6 +82,15 @@
     font-style: normal;
 }
 
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 /* Styling */
 
 * {
@@ -94,16 +103,14 @@
 
 body {
     background-color: var(--bg-main);
-    margin: 0;
-    padding: 0px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    unicode-bidi: bidi-override;
-    direction: rtl;
+    /* unicode-bidi: bidi-override; */
+    /* direction: rtl; */
 }
 
 main {
@@ -111,7 +118,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-top: 100px; */
+    margin-top: 100px;
 }
 
 footer {
@@ -149,17 +156,18 @@ nav {
 fieldset {
     border: 1px solid #ccc;
     border-radius: 25px;
-    background-color: var(--main-color);
-    width: 75%;
+    width: 100%;
     max-width: 700px;
-    max-height: 600px;
     margin: 20px 50px;
-    padding: 0px 25px;
+    padding: 10px 25px;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     animation: fadeIn 0.5s ease-in forwards;
+    /* background-image: linear-gradient(to bottom right, var(--main-color), var(--hover)); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 legend {
@@ -178,29 +186,102 @@ legend {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1;
-    top: -40px;
+    /* top: -40px; */
+    opacity: 0;
     animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 2.5s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-
-.whiteSpace {
-    background-color: #fff;
-    background-image: url(assets/images/home.jpg);
-    background-repeat: no-repeat;
-    background-position: 0px;
+.imgsidetop {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image: url(assets/images/turk.png);
     background-size: cover;
-    width: 100vw;
-    height: 60vh;
-    /* & img {
-        width: 80vw;
-    } */
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    padding: 20px;
+
+    & .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid var(--text-color);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        float: left;
+        position: relative;
+        left: -20px;
+    }
+
+    & .name {
+        font-size: 2.5rem;
+        margin: 10px 0;
+        font-weight: bold;
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+        color: var(--text-color);
+        font-family: 'TurkFontE', sans-serif;
+    }
+
+    & .lead {
+        font-size: 0.7rem;
+        margin-top: 10px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        color: var(--text-color);
+        font-family: 'TurkFontD', sans-serif;
+        position: relative;
+        /* top: -175px;
+        left: 70px; */
+    }
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right, var(--main-color), var(--hover));
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    & img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+
+    & .card-body {
+        flex: 1;
+        margin-left: 20px;
+        text-align: left;
+
+        & h4 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        & p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+    }
 }
