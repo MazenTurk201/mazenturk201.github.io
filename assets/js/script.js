@@ -12,3 +12,13 @@ fetch('assets/modules/nav.html')
 // تحميل النافبار من ملف خارجي
 document.body.appendChild(document.createElement("footer"));
 fetch('assets/modules/footer.html').then(res => res.text()).then(data => {document.getElementsByTagName('footer')[0].innerHTML = data;});
+
+
+// function goFun() {
+//     window.location.href = "https://mazenturk201.github.io/LoveChoice/";
+// }
+function goFun(idSection) {
+  setTimeout(() => {
+  window.location.hash = idSection;
+  }, 500);
+}
