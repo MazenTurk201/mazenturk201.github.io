@@ -376,10 +376,10 @@ section {
     }
 
     .icons a {
-        font-size: 1rem;
+        font-size: 0.9rem;
 
         & i {
-            font-size: 0.9rem;
+            font-size: 0.83rem;
         }
     }
 
