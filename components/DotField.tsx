@@ -31,7 +31,7 @@ interface DotFieldProps {
 }
 
 const DotField = memo(({
-  dotRadius = 1.5,
+  dotRadius = 3,
   dotSpacing = 14,
   cursorRadius = 200,
   cursorForce = 0.1,
@@ -40,8 +40,8 @@ const DotField = memo(({
   glowRadius = 0,
   sparkle = false,
   waveAmplitude = 0,
-  gradientFrom = 'rgba(168, 85, 247, 0.35)',
-  gradientTo = 'rgba(180, 151, 207, 0.25)',
+  gradientFrom = 'rgba(168, 85, 247, 0.3)',
+  gradientTo = 'rgba(180, 151, 207, 0.2)',
   glowColor = '#120F17',
   ...rest
 }: DotFieldProps) => {

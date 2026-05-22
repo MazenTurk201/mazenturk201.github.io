@@ -77,7 +77,7 @@ function ProjectCard({ cover, title, description, linkProj, tags }: { cover: str
       coneSpread={25}
       animated={false}
       colors={['#c084fc', '#f472b6', '#c538f8']}
-      className='zoom'
+      className='zoom w-full'
     >
       <div style={{ padding: '2em' }}>
         <div className="image-card">
@@ -153,8 +153,8 @@ function NavBar() {
 function aboutSection() {
   return (
     <div className='flex items-center justify-space-between gap-5 w-full'>
-      <img src={Formal} alt="Me"/>
-      <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+      <img src={Formal} alt="Me" />
+      <div className="flex flex-col items-center gap-6 text-center">
         about me section
       </div>
     </div>
@@ -171,15 +171,15 @@ function DotsBackground() {
 
 function headerContent() {
   return (
-    <div className="flex items-center gap-6 text-center sm:items-start sm:text-left w-full">
+    <div className="flex items-center gap-6 text-center w-full">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
             <img
               src={TurkImo}
               alt="Me Logo"
-              width={200}
-              height={200}
+              width={300}
+              className="w-48 md:w-80 h-auto" // 48 (192px) للفون، و 80 (320px) للكمبيوتر
             />
           </TooltipTrigger>
           <TooltipContent>
@@ -187,7 +187,7 @@ function headerContent() {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      <div className="max-w-2xl flex flex-col items-start gap-4 sm:items-start">
+      <div className="max-w-2xl flex flex-col items-start gap-4">
         {TextPressureProps()}
         <p className="flex gap-2 text-2xl text-zinc-600 dark:text-zinc-400">
           I'm a {<RotatingText
@@ -306,14 +306,14 @@ function App() {
       <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
         <NavBar />
         <DotsBackground />
-        <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <main className="flex flex-1 w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black">
           {headerContent()}
-          <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-            <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center">
               Mazen Sameh Sayed <sub className="text-sm text-zinc-500 dark:text-zinc-400">( Turk )</sub>
             </h1>
           </div>
-          <div className="flex flex-col gap-4 text-base font-medium sm:flex-row sm:items-center sm:justify-center sm:gap-6">
+          <div className="flex flex-col items-center justify-center gap-4 text-base font-medium">
             <a
               className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
               href="#Projects"
@@ -331,12 +331,16 @@ function App() {
             {skill({ title: "Python", tags: ["Tk", "Qt", "Flask", "requists"], icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/960px-Python-logo-notext.svg.png", percent: 70, color: "orange", isIconLeft: true, })}
             {skill({ title: "Flutter", tags: ["Test"], icon: "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png", percent: 70, color: "skyblue", isIconLeft: true, })}
           </section>
-          <section id='Projects' className="flex flex-col items-center justify-center gap-5">
+          <section id='Projects' className="scroll-mt-17 grid grid-cols-1 md:grid-cols-2 gap-5 w-full justify-items-center">
             {ProjectCard({ cover: "/Images/lc.png", title: "Love Choice?", description: "Flutter game truth and dare.", linkProj: "https://mazenturk201.github.io/Love-Choice", tags: ["Flutter", "Dart", "Game"] })}
             {ProjectCard({ cover: "/Images/tworm.png", title: "MT", description: "Bash script to pentest Android Devices.", linkProj: "https://mazenturk201.github.io/MT", tags: ["Linux", "Securte", "Bash"] })}
             {ProjectCard({ cover: "/Images/turkcover.png", title: "Love Choice?", description: "Flutter game truth and dare.", linkProj: "https://mazenturk201.github.io/Love-Choice", tags: ["Flutter", "Dart", "Game"] })}
             {ProjectCard({ cover: CoverIMG, title: "Love Choice?", description: "Flutter game truth and dare.", linkProj: "https://mazenturk201.github.io/Love-Choice", tags: ["Flutter", "Dart", "Game"] })}
           </section>
+          <h1>
+            ✍️ Random Dev Quote
+          </h1>
+          <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Use AI" />
         </main>
         {Footer()}
       </div>
