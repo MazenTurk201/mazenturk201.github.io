@@ -9,6 +9,11 @@ import BorderGlow from '../components/BorderGlow';
 import RotatingText from "../components/RotatingText";
 import ScrollReveal from '../components/ScrollReveal';
 import TextPressure from '../components/TextPressure';
+// @ts-ignore
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// @ts-ignore
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { TypeAnimation } from 'react-type-animation';
 import { Menu } from './components/animate-ui/icons/menu';
 import { useEffect, useState } from 'react';
 import {
@@ -46,6 +51,49 @@ const jobsName = [
   'Video Editor'
 ];
 
+const AboutMeCode = () => {
+  const codeString = `
+class Turk:
+  def __init__(self):
+    self.name = "Mazen Sameh"
+    self.age = 20
+    self.bd = "2006/8/31"
+    self.contry = "Egypt"
+    self.skills = ["Python", "Flutter", "Embedded Systems"]
+    self.status = "Developing cool stuff"
+
+  def __str__(self):
+    return f"{self.name} is a {', '.join(self.skills)} expert."
+
+me = Turk()
+print(me)
+  `;
+
+  const [displayedCode, setDisplayedCode] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const timer = setInterval(() => {
+      setDisplayedCode(codeString.slice(0, i));
+      i++;
+      if (i > codeString.length) clearInterval(timer);
+    }, 100); // سرعة الكتابة
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="w-full overflow-hidden">
+      <SyntaxHighlighter
+        language="python"
+        style={vscDarkPlus}
+        customStyle={{ padding: '20px', borderRadius: '12px', background: 'rgba(120, 0, 255, 0.15)' }}
+      >
+        {displayedCode}
+      </SyntaxHighlighter>
+    </div>
+  );
+};
+
 function TextPressureProps() {
   return (
     <div style={{ position: 'relative', }}>
@@ -79,7 +127,7 @@ function ProjectCard({ cover, title, description, linkProj, tags }: { cover: str
       colors={['#c084fc', '#f472b6', '#c538f8']}
       className='zoom w-full'
     >
-      <div style={{ padding: '2em' }}>
+      <div className='p-3 md:p-5'>
         <div className="image-card">
           <img src={cover} alt={title} style={{ aspectRatio: "16/9", objectFit: "cover" }} />
 
@@ -125,24 +173,39 @@ function AnimatedBlurText(Text: string, Direction: "top" | "bottom" = "top", Del
       delay={Delay}
       animateBy="words"
       direction={Direction}
-      className={isTitle ? "text-2xl font-bold text-black dark:text-zinc-50" : "text-xl text-black dark:text-zinc-50 hover:underline"}
+      className={isTitle ? "text-2xl font-bold text-black dark:text-zinc-50" : "text-xl text-black dark:text-zinc-50"}
     />
   )
 };
 
 function NavBar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // لو نزلنا أكتر من 20 بكسل، فعل الـ blur
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <nav className="w-full h-16 flex items-center justify-between px-8 bg-white dark:bg-black bg-opacity-50 backdrop-blur-sm fixed top-0 left-0 z-10">
+    <nav className={`w-full h-16 flex items-center justify-between px-8 fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 dark:bg-black/30 backdrop-blur' : 'bg-transparent'}`}>
       <div className="flex items-center gap-5">
         <img src={Logo} alt="Logo" className="w-10 h-10" />
-        <div>{AnimatedBlurText("Mazen Sameh", "top", 90, true)}</div>
+        <div className='not-sm:hidden'>{AnimatedBlurText("Mazen Sameh", "top", 90, true)}</div>
 
       </div>
       <div className="flex gap-4">
-        <a href="#" >{AnimatedBlurText("Home", "bottom", 120)}</a>
-        <a href="#AboutUS" >{AnimatedBlurText("About", "bottom", 150)}</a>
-        <a href="#" >{AnimatedBlurText("Contact", "bottom", 170)}</a>
-        <button className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center transition-colors hover:bg-gray-300 dark:hover:bg-gray-600" style={{ zIndex: '3' }}>
+        <a className='not-sm:hidden' href="#" >{AnimatedBlurText("Home", "bottom", 120)}</a>
+        <a className='not-sm:hidden' href="#AboutUS" >{AnimatedBlurText("About", "bottom", 150)}</a>
+        <a className='not-sm:hidden' href="#" >{AnimatedBlurText("Contact", "bottom", 170)}</a>
+        <button className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center transition-colors hover:bg-gray-300 dark:hover:bg-gray-600 sm:hidden" style={{ zIndex: '3' }}>
           <Menu animateOnTap />
         </button>
       </div>
@@ -153,10 +216,9 @@ function NavBar() {
 function aboutSection() {
   return (
     <div className='flex items-center justify-space-between gap-5 w-full'>
-      <img src={Formal} alt="Me" />
-      <div className="flex flex-col items-center gap-6 text-center">
-        about me section
-      </div>
+      <img src={Formal} alt="Me" className="w-90 md:w-80 h-auto rounded-2xl float-left" />
+      <div className="spliter"></div>
+      {AboutMeCode()}
     </div>
   );
 };
@@ -171,15 +233,14 @@ function DotsBackground() {
 
 function headerContent() {
   return (
-    <div className="flex items-center gap-6 text-center w-full">
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left w-full z-1">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger>
             <img
               src={TurkImo}
               alt="Me Logo"
-              width={300}
-              className="w-48 md:w-80 h-auto" // 48 (192px) للفون، و 80 (320px) للكمبيوتر
+              className="w-90 md:w-150 h-auto"
             />
           </TooltipTrigger>
           <TooltipContent>
@@ -187,9 +248,9 @@ function headerContent() {
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      <div className="max-w-2xl flex flex-col items-start gap-4">
+      <div className="flex flex-col items-center md:items-start gap-4 w-full">
         {TextPressureProps()}
-        <p className="flex gap-2 text-2xl text-zinc-600 dark:text-zinc-400">
+        <p className="flex gap-2 text-2xl text-zinc-600 dark:text-zinc-400 text-left">
           I'm a {<RotatingText
             texts={jobsName}
             mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
@@ -206,7 +267,6 @@ function headerContent() {
             loop
           />}.
         </p>
-
       </div>
     </div>
   )
@@ -278,7 +338,7 @@ export const RadixProgressDemo: React.FC<ProgressDemoProps> = ({ initialValue, c
 
 function skill({ title, tags, icon, percent, color, isIconLeft }: { title: string, tags: string[], icon: string, percent: number, color: string, isIconLeft: boolean }) {
   let iconBode = <div>
-    <img src={icon} alt={title as string} width={50} />
+    <img src={icon} alt={title as string} className="w-90 md:w-20 h-auto" />
   </div>
   let contentBody = <div className='flex flex-col justify-center items-center gap-3'>
     {title}
@@ -306,7 +366,7 @@ function App() {
       <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
         <NavBar />
         <DotsBackground />
-        <main className="flex flex-1 w-full flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black">
+        <main className="flex flex-1 w-full flex-col items-center justify-between py-22 md:pt-32 px-16 bg-white dark:bg-black">
           {headerContent()}
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center">
@@ -327,7 +387,7 @@ function App() {
           <section id='AboutUS'>
             {aboutSection()}
           </section>
-          <section id='Skills'>
+          <section id='Skills' className='scroll-mt-17 grid grid-cols-1 md:grid-cols-2 gap-5 w-full justify-items-center md:py-20'>
             {skill({ title: "Python", tags: ["Tk", "Qt", "Flask", "requists"], icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/960px-Python-logo-notext.svg.png", percent: 70, color: "orange", isIconLeft: true, })}
             {skill({ title: "Flutter", tags: ["Test"], icon: "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png", percent: 70, color: "skyblue", isIconLeft: true, })}
           </section>
@@ -337,10 +397,12 @@ function App() {
             {ProjectCard({ cover: "/Images/turkcover.png", title: "Love Choice?", description: "Flutter game truth and dare.", linkProj: "https://mazenturk201.github.io/Love-Choice", tags: ["Flutter", "Dart", "Game"] })}
             {ProjectCard({ cover: CoverIMG, title: "Love Choice?", description: "Flutter game truth and dare.", linkProj: "https://mazenturk201.github.io/Love-Choice", tags: ["Flutter", "Dart", "Game"] })}
           </section>
-          <h1>
-            ✍️ Random Dev Quote
-          </h1>
-          <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Use AI" />
+          <section id='End' className='min-h-100'>
+            <h1 className='text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center'>
+              ✍️ Random Dev Quote
+            </h1>
+            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Use AI" className="w-90 md:w-auto h-auto object-cover" />
+          </section>
         </main>
         {Footer()}
       </div>

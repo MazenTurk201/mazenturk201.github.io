@@ -112,7 +112,7 @@ p {
   margin: 0;
 }
 
-code,
+/* code, */
 .counter {
   font-family: var(--mono);
   display: inline-flex;
@@ -120,11 +120,25 @@ code,
   color: var(--text-h);
 }
 
-code {
+/* code {
   font-size: 15px;
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+} */
+
+section {
+  /* min-height: 100dvh; */
+  width: 100%;
+}
+
+#End {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
 }
 
 .image-card {
