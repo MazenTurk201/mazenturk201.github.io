@@ -1,15 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    tsconfigPaths() // الإضافة دي هتربط الـ الـ الـ aliases بتاعة الـ tsconfig بـ Vite علطول
   ],
+  resolve: {
+    tsconfigPaths: true // دي اللي بتغنيك عن الـ Plugin
+  },
+  server: {
+    host: '0.0.0.0', // دي بتخلي الـ Vite يسمع لكل الـ Network Interfaces
+    port: 80,
+    watch: {
+      usePolling: true, // ده بيجبر الـ Vite إنه يراقب الملفات بطريقة تانية لو الـ OS مبيبعتش تنبيه بالتغيير
+    },
+  },
   base: '/',
   build: {
     rollupOptions: {

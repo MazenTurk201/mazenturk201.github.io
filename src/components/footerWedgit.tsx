@@ -13,7 +13,23 @@ function Footer() {
       <p>Thanks for visiting my portfolio! {"<3`"}</p>
       <p>&copy; {new Date().getFullYear()} Mazen Sameh. All rights reserved.</p>
     </div>
-    <div className='w-90'>Center</div>
+    <div className='w-90'>
+      <p>Products:</p>
+      <ul>
+        <li>
+          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+        </li>
+        <li>
+          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+        </li>
+        <li>
+          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+        </li>
+        <li>
+          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+        </li>
+      </ul>
+    </div>
     <div>
       <Accordion type="single" collapsible className='w-full'>
         <AccordionItem value={'1'}>

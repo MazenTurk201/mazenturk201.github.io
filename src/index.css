@@ -177,6 +177,36 @@ section {
   z-index: 2;
 }
 
+.menuiconbutton{
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(170, 59, 255, 0.1);
+  border: 1px solid rgba(170, 59, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(170, 59, 255, 0.2);
+    border: 1px solid rgba(170, 59, 255, 0.5);
+  }
+}
+
+.glow {
+  filter: drop-shadow(0 0 20px rgba(170, 59, 255, 0.7));
+}
+
+.invert {
+  filter: invert(1) hue-rotate(150deg);
+}
+
+
 .image-card:hover .open-btn {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
@@ -189,6 +219,24 @@ section {
   border-radius: 5px;
   padding: 5px 10px;
   margin-bottom: 10px;
+  height: fit-content;
+}
+
+.zoomAnim{
+  animation: zoomAnimation 3s ease-in-out infinite;
+}
+
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .small {
@@ -276,12 +324,6 @@ img {
   -webkit-mask-image: linear-gradient(to top, transparent, black);
   mask-image: linear-gradient(to top, transparent, black);
   filter: drop-shadow(0 0 50px rgb(170, 59, 255));
-  transition: transform 0.2s ease-in;
-
-  &:hover {
-    transform: scale(1.05);
-    transition: transform 0.1s ease-in;
-  }
 }
 
 nav{

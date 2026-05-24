@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 interface ProgressDemoProps {
   initialValue: number;
@@ -32,13 +32,14 @@ export const RadixProgressDemo: React.FC<ProgressDemoProps> = ({ initialValue, c
 
 
 
-function skill({ title, tags, icon, percent, color, isIconLeft }: { title: string, tags: string[], icon: string, percent: number, color: string, isIconLeft: boolean }) {
+function skill({ title, tags, icon, percent, color, isIconLeft, ImgStyle }: { title: string, tags: string[], icon: string, percent: number, color: string, isIconLeft: boolean, ImgStyle?: string }) {
+  const randomDelay = useMemo(() => `${Math.random() * 3}s`, []);
   let iconBode = <div>
-    <img src={icon} alt={title as string} className="w-90 not-sm:w-20 h-auto" />
+    <img src={icon} alt={title as string} className={`w-30 not-sm:w-50 h-auto glow zoomAnim ${ImgStyle ?? ""}`} style={{ animationDelay: randomDelay }} />
   </div>
   let contentBody = <div className='flex flex-col justify-center items-center gap-3'>
     {title}
-    <div className='flex gap-2'>
+    <div className='grid grid-cols-6 gap-2 w-full'>
       {tags.map((tag, index) => (
         <span key={index} className="tag small">
           {tag}

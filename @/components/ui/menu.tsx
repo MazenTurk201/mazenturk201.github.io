@@ -75,7 +75,8 @@ const MenuIcon = forwardRef<MenuIconHandle, MenuIconProps>(
     return (
       <div
         className={cn(className)}
-        onMouseEnter={handleMouseEnter}
+        onClick={handleMouseEnter}
+        // onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         {...props}
       >
