@@ -35,11 +35,11 @@ print(me)
   }, []);
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden z-10">
       <SyntaxHighlighter
         language="python"
         style={vscDarkPlus}
-        customStyle={{ padding: '20px', borderRadius: '12px', background: 'rgba(120, 0, 255, 0.15)' }}
+        customStyle={{ padding: '20px', borderRadius: '12px', background: 'rgba(120, 0, 255, 0.15)', filter: 'drop-shadow(0px 0px 15px rgba(0, 0, 0, 1))'}}
       >
         {displayedCode}
       </SyntaxHighlighter>

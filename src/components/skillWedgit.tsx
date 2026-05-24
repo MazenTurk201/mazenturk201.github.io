@@ -34,7 +34,7 @@ export const RadixProgressDemo: React.FC<ProgressDemoProps> = ({ initialValue, c
 
 function skill({ title, tags, icon, percent, color, isIconLeft }: { title: string, tags: string[], icon: string, percent: number, color: string, isIconLeft: boolean }) {
   let iconBode = <div>
-    <img src={icon} alt={title as string} className="w-90 md:w-20 h-auto" />
+    <img src={icon} alt={title as string} className="w-90 not-sm:w-20 h-auto" />
   </div>
   let contentBody = <div className='flex flex-col justify-center items-center gap-3'>
     {title}

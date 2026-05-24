@@ -1,6 +1,6 @@
 import BorderGlow from '../../components/BorderGlow';
 
-function ProjectCard({ cover, title, description, linkProj, tags }: { cover: string, title: string, description: string, linkProj: string, tags: string[] }) {
+function ProjectCard({ cover, title, description, linkProj, linkSorce, tags }: { cover: string, title: string, description: string, linkProj: string, linkSorce: string | null, tags: string[] }) {
   return (
     <BorderGlow
       edgeSensitivity={30}
@@ -14,7 +14,7 @@ function ProjectCard({ cover, title, description, linkProj, tags }: { cover: str
       colors={['#c084fc', '#f472b6', '#c538f8']}
       className='zoom w-full'
     >
-      <div className='p-3 md:p-5'>
+      <div className='p-3 md:p-5 relative'>
         <div className="image-card">
           <img src={cover} alt={title} style={{ aspectRatio: "16/9", objectFit: "cover" }} />
 
@@ -36,6 +36,7 @@ function ProjectCard({ cover, title, description, linkProj, tags }: { cover: str
         </div>
         <h2 className="text-2xl font-bold text-black dark:text-zinc-50 text-left">{title}</h2>
         <p className="text-lg text-black dark:text-zinc-50 text-left">{description}</p>
+        <a href={linkSorce ?? linkProj} target="_blank" rel="noopener noreferrer"><i className='bi bi-github absolute right-5 bottom-5'></i></a>
       </div>
     </BorderGlow>
   )

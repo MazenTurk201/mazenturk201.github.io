@@ -77,6 +77,7 @@ html {
 
 body {
   margin: 0;
+  width: 100dvw;
 }
 
 h1,
@@ -282,6 +283,28 @@ img {
     transition: transform 0.1s ease-in;
   }
 }
+
+nav{
+  width: 100dvw;
+}
+
+.aboutsection{
+  background-color: rgba(170, 59, 255, 0.1);  
+  border-radius: 25px;
+  border: 1px solid rgba(170, 59, 255, 0.5);
+  padding: 20px;
+  width: 100%;
+  backdrop-filter: blur(2px);
+
+  .spliterr{
+    border: #aa3bff solid 10px;
+    border-radius: 25px;
+    border-width: 5px;
+    height: 100%;
+    background-color: #aa3bff;
+  }
+}
+
 
 footer {
   border-start-start-radius: 25px;
