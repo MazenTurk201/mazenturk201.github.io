@@ -4,109 +4,209 @@ import Skill from "@/components/skillWedgit";
 
 
 const skills = [
-    {
-        title: "Python",
-        tags: ["Tk", "Qt", "Flask", "requests", "Sqlite"],
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/960px-Python-logo-notext.svg.png",
-        percent: 70,
-        color: "orange",
-        isIconLeft: true,
-    },
+  {
+    title: "Python",
+    tags: [
+      "Flask",
+      "Flet",
+      "SQLite",
+      "Requests",
+      "Automation",
+      "API",
+      "Tkinter",
+      "PyQt",
+      "Web Scraping",
+    ],
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/960px-Python-logo-notext.svg.png",
+    percent: 85,
+    color: "orange",
+  },
 
-    {
-        title: "Flutter",
-        tags: ["LoveChoice?", "Firebase", "Supabase", "ResWA", "Animation"],
-        icon: "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png",
-        percent: 70,
-        color: "skyblue",
-        isIconLeft: true,
+  {
+    title: "Flutter",
+    tags: [
+      "Firebase",
+      "Supabase",
+      "Responsive UI",
+      "Animations",
+      "REST API",
+      "State Management",
+      "Android",
+      "Cross Platform",
+    ],
+    icon: "https://iconape.com/wp-content/png_logo_vector/flutter-logo.png",
+    percent: 75,
+    color: "skyblue",
+  },
 
-    },
+  {
+    title: "CCNA",
+    tags: [
+      "OSPF",
+      "Subnetting",
+      "DHCP",
+      "VLAN",
+      "IPv4",
+      "Routing",
+      "Switching",
+      "Cisco CLI",
+    ],
+    icon: "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
+    percent: 95,
+    color: "teal",
+    ImgStyle: "invert glow",
+  },
 
-    {
-        title: "CCNA",
-        tags: ["OSPF", "Subntting", "DHCP", "Telnet", "FTP", "IPv4"],
-        icon: "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
-        percent: 70,
-        color: "teal",
-        isIconLeft: true,
-        ImgStyle: "invert glow"
-    },
+  {
+    title: "CCNP",
+    tags: [
+      "BGP",
+      "EIGRP",
+      "RIP",
+      "IPv6",
+      "Static Routes",
+      "Link-State",
+      "Advanced Routing",
+      "Troubleshooting",
+    ],
+    icon: "https://www.computecindia.in/pics/ccnp.png",
+    percent: 80,
+    color: "pink",
+    ImgStyle: "invert glow",
+  },
 
-    {
-        title: "CCNP",
-        tags: ["EIGRP", "Distance Vector", "Link-state", "BGP", "RIP", "Default Route", "IPv6"],
-        icon: "https://www.computecindia.in/pics/ccnp.png",
-        percent: 70,
-        color: "pink",
-        isIconLeft: true,
-        ImgStyle: "invert glow"
-    },
+  {
+    title: "MCSA",
+    tags: [
+      "Active Directory",
+      "DNS",
+      "DHCP",
+      "GPO",
+      "WSUS",
+      "WDS",
+      "Remote Desktop",
+      "File Sharing",
+      "Windows Server",
+    ],
+    icon: "https://images.credly.com/images/835b37d1-09fb-42d5-9559-38abc7b4063d/linkedin_thumb_MCSA_Windows_Server_2012-01.png",
+    percent: 70,
+    color: "aqua",
+  },
 
-    {
-        title: "MCSA",
-        tags: ["WSUS", "DHCP", "DNS", "RDC", "GPO", "AD", "Encryption", "Compression", "Shadow Copy", "Folder Share", "WDS"],
-        icon: "https://images.credly.com/images/835b37d1-09fb-42d5-9559-38abc7b4063d/linkedin_thumb_MCSA_Windows_Server_2012-01.png",
-        percent: 70,
-        color: "aqua",
-        isIconLeft: true,
+  {
+    title: "Linux",
+    tags: [
+      "Bash",
+      "Shell Scripting",
+      "Nmap",
+      "Metasploit",
+      "System Admin",
+      "Terminal",
+      "THM Top 20%",
+      "APK Tools",
+    ],
+    icon: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Linux_mascot_tux.png",
+    percent: 78,
+    color: "darkslategrey",
+    isIconLeft: true,
+  },
 
-    },
+  {
+    title: "GitHub",
+    tags: [
+      "Git",
+      "Version Control",
+      "GitHub Pages",
+      "Repositories",
+      "Open Source",
+      "Collaboration",
+    ],
+    icon: "https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png",
+    percent: 95,
+    color: "darkolivegreen",
+  },
 
-    {
-        title: "Linux",
-        tags: ["Bash", "THM Top20%", "Scripting", "Inject APK", "MSF", "NMap"],
-        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Linux_mascot_tux.png",
-        percent: 70,
-        color: "darkslategrey",
-        isIconLeft: true
-    },
+  {
+    title: "HTML",
+    tags: [
+      "Semantic HTML",
+      "Forms",
+      "SEO",
+      "Accessibility",
+      "Responsive Design",
+      "Components",
+    ],
+    icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-html-3d-icon-png-download-3640299.png",
+    percent: 88,
+    color: "orange",
+  },
 
-    {
-        title: "Github",
-        tags: ["Git", "Git-Page"],
-        icon: "https://images.icon-icons.com/3685/PNG/512/github_logo_icon_229278.png",
-        percent: 70,
-        color: "darkolivegreen",
-        isIconLeft: true,
-    },
+  {
+    title: "CSS",
+    tags: [
+      "Flexbox",
+      "Grid",
+      "Tailwind",
+      "Bootstrap",
+      "Sass",
+      "Animations",
+      "Media Queries",
+      "Keyframes",
+      "Glassmorphism",
+      "Clone Pages",
+    ],
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png",
+    percent: 90,
+    color: "darkblue",
+  },
 
-    {
-        title: "HTML",
-        tags: ["React", "Semantic", "Forms", "SEO", "Accessibility", "Front-End", "Back-End"],
-        icon: "https://cdn3d.iconscout.com/3d/free/thumb/free-html-3d-icon-png-download-3640299.png",
-        percent: 70,
-        color: "orange",
-        isIconLeft: true,
-    },
+  {
+    title: "React",
+    tags: [
+      "Hooks",
+      "Components",
+      "Vite",
+      "Props",
+      "State",
+      "JSX",
+      "Virtual DOM",
+      "NPM",
+    ],
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png",
+    percent: 75,
+    color: "skyblue",
+  },
 
-    {
-        title: "CSS",
-        tags: ["MediaQuery", "Flexbox", "Grid", "Bootstrap", "Tailwind", "Sass", "KeyFrame", "Animation", "Fonts"],
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
-        percent: 90,
-        color: "darkblue",
-        isIconLeft: true,
-    },
+  {
+    title: "C++",
+    tags: [
+      "OOP",
+      "Arduino IDE",
+      "Algorithms",
+      "Problem Solving",
+      "Pointers",
+      "Data Structures",
+    ],
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png",
+    percent: 50,
+    color: "skyblue",
+  },
 
-    {
-        title: "C++",
-        tags: ["Test"],
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/960px-ISO_C%2B%2B_Logo.svg.png",
-        percent: 25,
-        color: "skyblue",
-        isIconLeft: true,
-    },
-
-    {
-        title: "Typing",
-        tags: ["Fast", "AR", "EN"],
-        icon: "https://cdn3d.iconscout.com/3d/premium/thumb/hand-typing-3d-icon-png-download-9210232.png",
-        percent: 80,
-        color: "gray",
-        isIconLeft: true,
-    },
-]
+  {
+    title: "Data Entry",
+    tags: [
+      "Fast Typing",
+      "Microsoft Office",
+      "Arabic",
+      "English",
+      "Accuracy",
+      "Productivity",
+    ],
+    icon: "https://cdn3d.iconscout.com/3d/premium/thumb/hand-typing-3d-icon-png-download-9210232.png",
+    percent: 80,
+    color: "gray",
+  },
+];
 
 
 export default function SkillSlider() {
@@ -118,7 +218,6 @@ export default function SkillSlider() {
         >
             <div className="carousel h-80">
                 <div className="carousel-body h-full flex items-center justify-center opacity-0">
-                    {/* <!-- Slide 1 --> */}
                     {skills.map((skillInfo, index) => (
                         <div key={index} className="carousel-slide px-1">
                             <Skill
@@ -127,7 +226,6 @@ export default function SkillSlider() {
                                 icon={skillInfo.icon}
                                 percent={skillInfo.percent}
                                 color={skillInfo.color}
-                                isIconLeft={skillInfo.isIconLeft}
                                 ImgStyle={skillInfo.ImgStyle}
                             />
                         </div>

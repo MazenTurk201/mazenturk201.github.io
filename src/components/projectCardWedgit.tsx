@@ -35,7 +35,7 @@ function ProjectCard({ cover, title, description, linkProj, linkSorce, tags }: {
           ))}
         </div>
         <h2 className="text-2xl font-bold text-black dark:text-zinc-50 text-left">{title}</h2>
-        <p className="text-lg text-black dark:text-zinc-50 text-left">{description}</p>
+        <p className="text-lg text-black dark:text-zinc-50 text-left pr-4">{description}</p>
         <a href={linkSorce ?? linkProj} target="_blank" rel="noopener noreferrer"><i className='bi bi-github absolute right-5 bottom-5'></i></a>
       </div>
     </BorderGlow>

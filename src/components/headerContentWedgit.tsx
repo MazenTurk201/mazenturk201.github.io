@@ -3,33 +3,16 @@ import RotatingText from "../../components/RotatingText";
 import iconsRow from "@/components/iconsRow";
 import jobsName from "@/components/globalData";
 import TextPressureProps from "@/components/textPressureWedgit";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/animate-ui/components/animate/tooltip';
-
-
 
 
 function headerContent() {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left w-full z-1">
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger>
-            <img
-              src={TurkImo}
-              alt="Me Logo"
-              className="w-90 md:w-150 h-auto"
-            />
-          </TooltipTrigger>
-          <TooltipContent>
-            <div className='whoisme'><p className='text-xl'>Turk</p></div>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-6 txt-center md:text-left w-full z-1">
+      <img
+        src={TurkImo}
+        alt="Logo"
+        className="w-90 md:w-100 h-auto logo"
+      />
       <div className="flex flex-col items-center md:items-start gap-4 w-full">
         {TextPressureProps()}
         {iconsRow()}

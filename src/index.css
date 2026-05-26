@@ -177,7 +177,7 @@ section {
   z-index: 2;
 }
 
-.menuiconbutton{
+.menuiconbutton {
   z-index: 100;
   position: absolute;
   top: 0px;
@@ -195,6 +195,16 @@ section {
   &:hover {
     background-color: rgba(170, 59, 255, 0.2);
     border: 1px solid rgba(170, 59, 255, 0.5);
+  }
+}
+
+.logo {
+  transition: all 0.3s ease;
+  transform: scale(1);
+  &:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 30px rgba(170, 59, 255, 0.5));
   }
 }
 
@@ -220,9 +230,10 @@ section {
   padding: 5px 10px;
   margin-bottom: 10px;
   height: fit-content;
+  width: fit-content;
 }
 
-.zoomAnim{
+.zoomAnim {
   animation: zoomAnimation 3s ease-in-out infinite;
 }
 
@@ -231,9 +242,11 @@ section {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -326,19 +339,19 @@ img {
   filter: drop-shadow(0 0 50px rgb(170, 59, 255));
 }
 
-nav{
+nav {
   width: 100dvw;
 }
 
-.aboutsection{
-  background-color: rgba(170, 59, 255, 0.1);  
+.aboutsection {
+  background-color: rgba(170, 59, 255, 0.1);
   border-radius: 25px;
   border: 1px solid rgba(170, 59, 255, 0.5);
   padding: 20px;
   width: 100%;
   backdrop-filter: blur(2px);
 
-  .spliterr{
+  .spliterr {
     border: #aa3bff solid 10px;
     border-radius: 25px;
     border-width: 5px;

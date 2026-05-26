@@ -12,6 +12,15 @@ const projects = [
         linkSorce: "https://github.com/MazenTurk201/Love-Choice",
         tags: ["Flutter", "Dart", "Game", "Android"],
     },
+    
+    {
+        cover: "https://raw.githubusercontent.com/MazenTurk201/Turk-Translate/refs/heads/main/TTransBanner.png",
+        title: "Turk Translate",
+        description: "Copy text to translate it in Notification.",
+        linkProj: "https://www.linkedin.com/posts/mazen-sameh-19a0a2302_windows-productivity-tools-ugcPost-7445418414610944000-U903/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1BWIYBlS9Ww9vbk5W_0td3exW7u2EjUuQ",
+        linkSorce: "https://github.com/MazenTurk201/Turk-Translate",
+        tags: ["Flet", "Cross-Platform", "Python"],
+    },
 
     {
         cover: "/Images/wpbe.png",
@@ -38,15 +47,6 @@ const projects = [
         linkProj: "https://github.com/MazenTurk201/ProjectManagementDB",
         linkSorce: null,
         tags: ["Flask", "Back-End", "MySql"],
-    },
-
-    {
-        cover: "https://raw.githubusercontent.com/MazenTurk201/Turk-Translate/refs/heads/main/T%20translate%20logo.png",
-        title: "Turk Translate",
-        description: "Flutter game truth and dare.",
-        linkProj: "https://www.linkedin.com/posts/mazen-sameh-19a0a2302_windows-productivity-tools-ugcPost-7445418414610944000-U903/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1BWIYBlS9Ww9vbk5W_0td3exW7u2EjUuQ",
-        linkSorce: null,
-        tags: ["Flet", "Cross-Platform", "Python"],
     },
 
     {
