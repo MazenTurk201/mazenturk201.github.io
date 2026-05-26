@@ -35,7 +35,7 @@ export const RadixProgressDemo: React.FC<ProgressDemoProps> = ({ initialValue, c
 function skill({ title, tags, icon, percent, color, isIconLeft, ImgStyle }: { title: string, tags: string[], icon: string, percent: number, color: string, isIconLeft: boolean, ImgStyle?: string }) {
   const randomDelay = useMemo(() => `${Math.random() * 3}s`, []);
   let iconBode = <div>
-    <img src={icon} alt={title as string} className={`w-30 not-sm:w-50 h-auto glow zoomAnim ${ImgStyle ?? ""}`} style={{ animationDelay: randomDelay }} />
+    <img src={icon} alt={title as string} className={`w-30 not-sm:w-9 h-auto glow zoomAnim ${ImgStyle ?? ""}`} style={{ animationDelay: randomDelay }} />
   </div>
   let contentBody = <div className='flex flex-col justify-center items-center gap-3'>
     {title}
