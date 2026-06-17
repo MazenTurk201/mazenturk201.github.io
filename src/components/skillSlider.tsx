@@ -1,8 +1,15 @@
 "use client";
 import Skill from "@/components/skillWedgit";
+// بنجيب المكونات الأساسية من Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+// بنجيب الـ Modules اللي محتاجينها (زي التقليب الأوتوماتيك والـ Pagination)
+import { Autoplay, Pagination } from 'swiper/modules';
 
+// بنعمل Import للـ CSS الخاص بـ Swiper عشان يشتغل صح
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-
+// ... مصفوفة الـ skills بتاعتك زي ما هي بالظبط بدون أي تغيير ...
 const skills = [
   {
     title: "Python",
@@ -210,37 +217,46 @@ const skills = [
 
 
 export default function SkillSlider() {
-    return (
-        <div
-            id="centered"
-            data-carousel='{ "loadingClasses": "opacity-0", "isCentered": true, "slidesQty": { "xs": 1, "lg": 2 } }'
-            className="relative w-full"
-        >
-            <div className="carousel h-80">
-                <div className="carousel-body h-full flex items-center justify-center opacity-0">
-                    {skills.map((skillInfo, index) => (
-                        <div key={index} className="carousel-slide px-1">
-                            <Skill
-                                title={skillInfo.title}
-                                tags={skillInfo.tags}
-                                icon={skillInfo.icon}
-                                percent={skillInfo.percent}
-                                color={skillInfo.color}
-                                ImgStyle={skillInfo.ImgStyle}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
-            < button type="button" className="carousel-prev inset-s-5 max-sm:inset-s-3 carousel-disabled:opacity-50 size-9.5 bg-black flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm border border-b-fuchsia-950" >
-                <span className="size-5 cursor-pointer text-center">←</span>
-                <span className="sr-only">Previous</span>
-            </button >
-            {/* <!-- Next Slide --> */}
-            < button type="button" className="carousel-next inset-e-5 max-sm:inset-e-3 carousel-disabled:opacity-50 size-9.5 bg-black flex items-center justify-center rounded-full shadow-base-300/20 shadow-sm border border-b-fuchsia-950" >
-                <span className="size-5">→</span>
-                <span className="sr-only">Next</span>
-            </button >
-        </div >
-    );
+  return (
+    <div className="w-full max-w-6xl mx-auto py-5">
+      <Swiper
+        // بنعرف الـ Modules اللي هنستخدمها
+        modules={[Autoplay, Pagination]}
+        spaceBetween={20} // المسافة بين الكروت بـ البيكسل
+        slidesPerView={1} // الافتراضي للموبايل
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        // هنا بقى الـ Breakpoints المقابلة للـ Responsive بتاعك
+        breakpoints={{
+          // لما الشاشة تكون أكبر من أو تساوي 464px (التابلت)
+          464: {
+            slidesPerView: 2,
+          },
+          // لما الشاشة تكون أكبر من أو تساوي 1024px (الديسك توب)
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+        className="mySwiper"
+      >
+        {skills.map((skillInfo, index) => (
+          // كل كارت لازم يتحط جوه المكون ده الخاص بـ Swiper
+          <SwiperSlide key={index} className="flex items-center justify-center pt-20 pb-20"> 
+            <Skill
+              title={skillInfo.title}
+              tags={skillInfo.tags}
+              icon={skillInfo.icon}
+              percent={skillInfo.percent}
+              color={skillInfo.color}
+              ImgStyle={skillInfo.ImgStyle}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 }
+

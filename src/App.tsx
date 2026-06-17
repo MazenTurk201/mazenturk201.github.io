@@ -7,7 +7,6 @@ import AboutSection from "@/components/aboutSection";
 import HeaderContent from "@/components/headerContentWedgit";
 import ProjectsSlider from './components/tabsProject';
 import SkillSlider from './components/skillSlider';
-import "flyonui/flyonui";
 
 
 export default function App() {

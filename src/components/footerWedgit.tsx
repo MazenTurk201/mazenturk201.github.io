@@ -17,37 +17,48 @@ function Footer() {
       <p>Products:</p>
       <ul>
         <li>
-          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+          <a href="https://mazenturk201.github.io/Love-Choice" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Love Choice</a>
         </li>
         <li>
-          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+          <a href="https://github.com/MazenTurk201/Turk-Translate/releases/latest" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Turk Translate</a>
         </li>
         <li>
-          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+          <a href="https://mazenturk201.github.io/Love-Choice" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Love Choice</a>
         </li>
         <li>
-          <a href="https://mazenturk201.github.io/Love-Choice">Love Choice</a>
+          Let's build something amazing together!
         </li>
       </ul>
     </div>
-    <div>
+    <div className='w-1/5 flex flex-col items-center justify-center gap-2'>
       <Accordion type="single" collapsible className='w-full'>
         <AccordionItem value={'1'}>
           <AccordionTrigger>How to contact?</AccordionTrigger>
-          <AccordionContent>
+          <AccordionContent className='flex flex-col items-start justify-start gap-2'>
             <div>Contact me via <a className='text-green-500' href="https://wa.me/201092130013?text=Hello+Turk">Whatsapp</a></div>
+            <div>Contact me via <a className='text-red-500' href="mailto:maznktr@gmail.com">Email</a></div>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value={'2'}>
-          <AccordionTrigger>Accordion Item 2</AccordionTrigger>
-          <AccordionContent>
-            <div>Accordion Content 2</div>
+          <AccordionTrigger>What services do I offer?</AccordionTrigger>
+          <AccordionContent className='flex flex-col items-start justify-start gap-2'>
+            <div className='flex flex-col items-start justify-start gap-2'>
+              I specialize in IT Engineering
+              <ul className='list-disc list-inside text-sm text-zinc-600 dark:text-zinc-400 flex flex-col items-start justify-start gap-1'>
+                <li>CCTV Installation & Maintenance</li>
+                <li>Mobile App Development</li>
+                <li>Python Development</li>
+                <li>Web Development</li>
+                <li>Network Configuration</li>
+                <li>And more!</li>
+              </ul>
+            </div>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value={'3'}>
-          <AccordionTrigger>Accordion Item 2</AccordionTrigger>
+          <AccordionTrigger>Are you available for freelance?</AccordionTrigger>
           <AccordionContent>
-            <div>Accordion Content 2</div>
+            Yes, I am open to freelance opportunities. Feel free to reach out to discuss your project and how I can help bring it to life!
           </AccordionContent>
         </AccordionItem>
       </Accordion>
