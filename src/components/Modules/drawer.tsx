@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MenuIcon } from "../../../@/components/ui/menu";
-import AnimatedBlurText from "../Utilties/animatedBlurText";
+import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
+import { Link } from "react-router-dom";
 
 const SidebarDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +28,10 @@ const SidebarDrawer = () => {
         <div className="p-4 pt-20">
           <h2 className="text-3xl font-bold relative -top-15 -left-10">Welcome!!</h2>
           <ul className="-mt-10">
-            <li className="py-2"><a href="/" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("Main", "top", 200)}</a></li>
-            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("Contact", "bottom", 170)}</a></li>
-            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("About", "bottom", 150)}</a></li>
-            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("Services", "bottom", 130)}</a></li>
+            <li className="py-2"><Link to="/" className="">{AnimatedBlurText("Main", "top", 200)}</Link></li>
+            <li className="py-2"><Link to="/contact" className="">{AnimatedBlurText("Contact", "bottom", 170)}</Link></li>
+            <li className="py-2"><Link to="/about" className="">{AnimatedBlurText("About", "bottom", 150)}</Link></li>
+            <li className="py-2"><Link to="/services" className="">{AnimatedBlurText("Services", "bottom", 130)}</Link></li>
           </ul>
         </div>
       </div>

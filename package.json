@@ -26,6 +26,7 @@
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-multi-carousel": "^2.8.6",
+    "react-router-dom": "^7.18.0",
     "react-syntax-highlighter": "^16.1.1",
     "react-type-animation": "^3.2.0",
     "swiper": "^12.2.0",
