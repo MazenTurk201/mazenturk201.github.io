@@ -6,8 +6,14 @@ import {
   AccordionContent,
 } from '@/components/animate-ui/components/radix/accordion';
 
+function ListItem(Title: string, Link: string) {
+  return <li>
+    <a target='_blank' href={Link} rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 {Title}</a>
+  </li>
+}
+
 function Footer() {
-  return <footer>
+  return <footer className='w-full flex not-sm:flex-col items-center justify-center gap-5 p-10 bg-zinc-50 dark:bg-black text-zinc-800 dark:text-zinc-200'>
     <div className='flex flex-col items-center justify-center text-left gap-3'>
       <img src={Logo} alt="Turk Logo" className="w-20 h-20" />
       <p>Thanks for visiting my portfolio! {"<3`"}</p>
@@ -16,15 +22,9 @@ function Footer() {
     <div className='w-90'>
       <p>Products:</p>
       <ul>
-        <li>
-          <a href="https://mazenturk201.github.io/Love-Choice" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Love Choice</a>
-        </li>
-        <li>
-          <a href="https://github.com/MazenTurk201/Turk-Translate/releases/latest" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Turk Translate</a>
-        </li>
-        <li>
-          <a href="https://mazenturk201.github.io/Love-Choice" rel="noreferrer" className="hover:text-purple-400 transition-colors">🔗 Love Choice</a>
-        </li>
+        {ListItem("Love Choice", "https://mazenturk201.github.io/Love-Choice")}
+        {ListItem("Turk Translate", "https://github.com/MazenTurk201/Turk-Translate/releases/latest")}
+        {ListItem("Easy-Command", "https://github.com/MazenTurk201/Easy-Command/releases/latest")}
         <li>
           Let's build something amazing together!
         </li>
@@ -35,8 +35,8 @@ function Footer() {
         <AccordionItem value={'1'}>
           <AccordionTrigger>How to contact?</AccordionTrigger>
           <AccordionContent className='flex flex-col items-start justify-start gap-2'>
-            <div>Contact me via <a className='text-green-500' href="https://wa.me/201092130013?text=Hello+Turk">Whatsapp</a></div>
-            <div>Contact me via <a className='text-red-500' href="mailto:maznktr@gmail.com">Email</a></div>
+            <div>Contact me via <a target='_blank' className='text-green-500' href="https://wa.me/201092130013?text=Hello+Turk">Whatsapp</a></div>
+            <div>Contact me via <a target='_blank' className='text-red-500' href="mailto:maznktr@gmail.com">Email</a></div>
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value={'2'}>

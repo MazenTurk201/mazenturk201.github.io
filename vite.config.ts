@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path/win32'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -9,7 +10,9 @@ export default defineConfig({
     tailwindcss(),
   ],
   resolve: {
-    tsconfigPaths: true // دي اللي بتغنيك عن الـ Plugin
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
   server: {
     host: '0.0.0.0', // دي بتخلي الـ Vite يسمع لكل الـ Network Interfaces

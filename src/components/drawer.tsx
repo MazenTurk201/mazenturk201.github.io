@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MenuIcon } from "../../@/components/ui/menu";
+import AnimatedBlurText from "./animatedBlurText";
 
 const SidebarDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,14 +21,15 @@ const SidebarDrawer = () => {
 
       {/* الـ Drawer نفسه */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-black transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-screen z-20 w-64 bg-white dark:bg-black transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="p-4 pt-20">
-          <h2 className="text-xl font-bold">القائمة الجانبية</h2>
-          <ul className="mt-4">
-            <li className="py-2">حاجة 1</li>
-            <li className="py-2">حاجة 2</li>
+          <h2 className="text-3xl font-bold relative -top-15 -left-10">Welcome!!</h2>
+          <ul className="-mt-10">
+            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("Contact", "bottom", 170)}</a></li>
+            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("About", "bottom", 150)}</a></li>
+            <li className="py-2"><a href="#" target="_blank" rel="noopener noreferrer">{AnimatedBlurText("Services", "bottom", 130)}</a></li>
           </ul>
         </div>
       </div>

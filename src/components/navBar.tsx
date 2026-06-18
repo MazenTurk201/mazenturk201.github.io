@@ -26,12 +26,9 @@ function NavBar() {
         <img src={Logo} alt="Logo" className="w-10 h-10" />
         <div className='not-sm:hidden'>{AnimatedBlurText("Mazen Sameh", "top", 90, true)}</div>
       </div>
-      <div className="flex gap-4">
-        <a className='not-sm:hidden' href="#" >{AnimatedBlurText("Home", "bottom", 120)}</a>
-        <a className='not-sm:hidden' href="#AboutUS" >{AnimatedBlurText("About", "bottom", 150)}</a>
-        <a className='not-sm:hidden' href="#" >{AnimatedBlurText("Contact", "bottom", 170)}</a>
-        <div className={`w-10  bg-white/30 dark:bg-black/30`}>
-          {SidebarDrawer()}
+      <div className="flex items-center justify-center">
+        <div className={`w-10 bg-white/30 dark:bg-black/30`}>
+          <SidebarDrawer />
         </div>
       </div>
     </nav>
