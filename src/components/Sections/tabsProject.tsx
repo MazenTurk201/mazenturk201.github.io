@@ -1,7 +1,6 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import ProjectCard from "./projectCardWedgit";
+import ProjectCard from "@/components/Widgets/projectCardWedgit";
 
 const projects = [
     {

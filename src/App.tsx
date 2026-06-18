@@ -1,12 +1,12 @@
 import './App.css'
-import scrolltotext from "@/components/scrollRevalWedgit";
-import NavBar from "@/components/navBar";
-import Footer from "@/components/footerWedgit";
-import DotsBackground from "@/components/dotsBackground";
-import AboutSection from "@/components/aboutSection";
-import HeaderContent from "@/components/headerContentWedgit";
-import ProjectsSlider from './components/tabsProject';
-import SkillSlider from './components/skillSlider';
+import scrolltotext from "@/components/Widgets/scrollRevalWedgit";
+import NavBar from "@/components/Modules/navBar";
+import Footer from "@/components/Modules/footerWedgit";
+import DotsBackground from "@/components/Modules/dotsBackground";
+import AboutSection from "@/components/Sections/aboutSection";
+import HeaderContent from "@/components/Sections/headerContentWedgit";
+import ProjectsSlider from './components/Sections/tabsProject';
+import SkillSlider from './components/Sections/skillSlider';
 
 
 export default function App() {

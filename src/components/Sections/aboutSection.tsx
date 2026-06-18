@@ -1,4 +1,4 @@
-import AboutMeCode from "@/components/aboutMeCodeWedgit";
+import AboutMeCode from "@/components/Widgets/aboutMeCodeWedgit";
 
 export default function aboutSection() {
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Logo from '../../src/assets/images/MT.png';
-import AnimatedBlurText from "@/components/animatedBlurText";
-import SidebarDrawer from "@/components/drawer";
+import Logo from '../../../src/assets/images/MT.png';
+import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
+import SidebarDrawer from "@/components/Modules/drawer";
 
 
 function NavBar() {

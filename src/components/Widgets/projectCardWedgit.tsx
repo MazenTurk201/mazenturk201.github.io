@@ -1,4 +1,4 @@
-import BorderGlow from '../../components/BorderGlow';
+import BorderGlow from '../../../components/BorderGlow';
 
 function ProjectCard({ cover, title, description, linkProj, linkSorce, tags }: { cover: string, title: string, description: string, linkProj: string, linkSorce: string | null, tags: string[] }) {
   return (

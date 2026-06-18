@@ -1,4 +1,4 @@
-import TextPressure from '../../components/TextPressure';
+import TextPressure from '../../../components/TextPressure';
 
 function TextPressureProps() {
   return (

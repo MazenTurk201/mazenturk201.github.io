@@ -1,4 +1,4 @@
-import ScrollReveal from '../../components/ScrollReveal';
+import ScrollReveal from '../../../components/ScrollReveal';
 
 function scrolltotext(Text: string) {
     return <ScrollReveal

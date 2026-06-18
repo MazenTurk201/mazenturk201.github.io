@@ -1,10 +1,10 @@
-import Logo from '../../src/assets/images/MT.png';
+import Logo from '../../../src/assets/images/MT.png';
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from '@/components/animate-ui/components/radix/accordion';
+} from '@/components/Utilties/animate-ui/components/radix/accordion';
 
 function ListItem(Title: string, Link: string) {
   return <li>
@@ -30,7 +30,7 @@ function Footer() {
         </li>
       </ul>
     </div>
-    <div className='w-1/5 flex flex-col items-center justify-center gap-2'>
+    <div className='md:w-1/5 w-full flex flex-col items-center justify-center gap-2'>
       <Accordion type="single" collapsible className='w-full'>
         <AccordionItem value={'1'}>
           <AccordionTrigger>How to contact?</AccordionTrigger>

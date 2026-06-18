@@ -10,7 +10,7 @@ import {
   type AccordionItemProps as AccordionItemPrimitiveProps,
   type AccordionTriggerProps as AccordionTriggerPrimitiveProps,
   type AccordionContentProps as AccordionContentPrimitiveProps,
-} from '@/components/animate-ui/primitives/radix/accordion';
+} from '@/components/Utilties/animate-ui/primitives/radix/accordion';
 import { cn } from '@/lib/utils';
 
 type AccordionProps = AccordionPrimitiveProps;

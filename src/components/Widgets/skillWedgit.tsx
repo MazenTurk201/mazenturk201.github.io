@@ -1,5 +1,5 @@
 import { useMemo, } from "react";
-import { RadixProgressDemo } from "@/components/progress";
+import { RadixProgressDemo } from "@/components/Widgets/progress";
 
 
 

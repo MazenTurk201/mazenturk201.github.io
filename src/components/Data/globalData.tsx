@@ -1,15 +1,25 @@
-"use client";
-import Skill from "@/components/skillWedgit";
-// بنجيب المكونات الأساسية من Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-// بنجيب الـ Modules اللي محتاجينها (زي التقليب الأوتوماتيك والـ Pagination)
-import { Autoplay, Pagination } from 'swiper/modules';
+const jobsName = [
+  'IT Engineer',
+  'Software Eng',
+  'Instructor',
+  'Programmer',
+  'Developer',
+  'Data Entry',
+  'Freelancer',
+  'Sys Admin',
+  'Network Eng',
+  'Mobile Dev',
+  'Web Dev',
+  'Front-End Dev',
+  'Back-End Dev',
+  'Full-Stack Dev',
+  'Tech Support',
+  'Help Desk',
+  'Scripting Expert',
+  'Tech Enthusiast',
+  'Video Editor'
+];
 
-// بنعمل Import للـ CSS الخاص بـ Swiper عشان يشتغل صح
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-// ... مصفوفة الـ skills بتاعتك زي ما هي بالظبط بدون أي تغيير ...
 const skills = [
   {
     title: "Python",
@@ -216,47 +226,44 @@ const skills = [
 ];
 
 
-export default function SkillSlider() {
-  return (
-    <div className="w-full max-w-6xl mx-auto py-5">
-      <Swiper
-        // بنعرف الـ Modules اللي هنستخدمها
-        modules={[Autoplay, Pagination]}
-        spaceBetween={20} // المسافة بين الكروت بـ البيكسل
-        slidesPerView={1} // الافتراضي للموبايل
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        // هنا بقى الـ Breakpoints المقابلة للـ Responsive بتاعك
-        breakpoints={{
-          // لما الشاشة تكون أكبر من أو تساوي 464px (التابلت)
-          464: {
-            slidesPerView: 2,
-          },
-          // لما الشاشة تكون أكبر من أو تساوي 1024px (الديسك توب)
-          1024: {
-            slidesPerView: 3,
-          },
-        }}
-        className="mySwiper"
-      >
-        {skills.map((skillInfo, index) => (
-          // كل كارت لازم يتحط جوه المكون ده الخاص بـ Swiper
-          <SwiperSlide key={index} className="flex items-center justify-center pt-20 pb-20"> 
-            <Skill
-              title={skillInfo.title}
-              tags={skillInfo.tags}
-              icon={skillInfo.icon}
-              percent={skillInfo.percent}
-              color={skillInfo.color}
-              ImgStyle={skillInfo.ImgStyle}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  );
-}
+    const mediaLinks = [{
+        icon: "bi bi-facebook",
+        link: "https://www.facebook.com/mazen.turk.269412/"
+    }, {
+        icon: "bi bi-github",
+        link: "https://github.com/MazenTurk201/"
+    }, {
+        icon: "bi bi-whatsapp",
+        link: "https://wa.me/201092130013?text=Hi+Turk"
+    }, {
+        icon: "bi bi-telegram",
+        link: "https://t.me/mazenturk"
+    }, {
+        icon: "bi bi-discord",
+        link: "https://discord.com/channels/@me/983875402651021353"
+    }, {
+        icon: "bi bi-linkedin",
+        link: "https://www.linkedin.com/in/mazen-sameh-19a0a2302/"
+    }, {
+        icon: "bi bi-instagram",
+        link: "https://instagram.com/mazenturkk"
+    }, {
+        icon: "bi bi-paypal",
+        link: "https://www.paypal.com/paypalme/fesbok"
+    }, {
+        icon: "bi bi-youtube",
+        link: "https://www.youtube.com/@mazenturk"
+    }, {
+        icon: "bi bi-tiktok",
+        link: "https://tiktok.com/@mazenturk"
+    }, {
+        icon: "bi bi-basket2-fill",
+        link: "https://payhip.com/mazenturk"
+    },{
+        icon: "bi bi-cup-hot-fill",
+        link: "https://buymeacoffee.com/maznktrl"
+    }
+];
 
+
+export { jobsName, skills, mediaLinks };
