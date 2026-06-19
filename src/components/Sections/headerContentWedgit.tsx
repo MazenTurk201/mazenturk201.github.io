@@ -1,8 +1,8 @@
 import TurkImo from '../../../src/assets/images/turkImo.png';
 import RotatingText from "../../../components/RotatingText";
-import iconsRow from "@/components/Widgets/iconsRow";
+import iconsRow from "@/components/Widgets/iconsRowWidgets";
 import { jobsName } from "@/components/Data/globalData";
-import TextPressureProps from "@/components/Widgets/textPressureWedgit";
+import TextPressureProps from "@/components/Widgets/textPressureWidgets";
 
 
 function headerContent() {

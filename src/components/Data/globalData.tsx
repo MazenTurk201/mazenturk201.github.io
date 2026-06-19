@@ -226,44 +226,74 @@ const skills = [
 ];
 
 
-    const mediaLinks = [{
-        icon: "bi bi-facebook",
-        link: "https://www.facebook.com/mazen.turk.269412/"
-    }, {
-        icon: "bi bi-github",
-        link: "https://github.com/MazenTurk201/"
-    }, {
-        icon: "bi bi-whatsapp",
-        link: "https://wa.me/201092130013?text=Hi+Turk"
-    }, {
-        icon: "bi bi-telegram",
-        link: "https://t.me/mazenturk"
-    }, {
-        icon: "bi bi-discord",
-        link: "https://discord.com/channels/@me/983875402651021353"
-    }, {
-        icon: "bi bi-linkedin",
-        link: "https://www.linkedin.com/in/mazen-sameh-19a0a2302/"
-    }, {
-        icon: "bi bi-instagram",
-        link: "https://instagram.com/mazenturkk"
-    }, {
-        icon: "bi bi-paypal",
-        link: "https://www.paypal.com/paypalme/fesbok"
-    }, {
-        icon: "bi bi-youtube",
-        link: "https://www.youtube.com/@mazenturk"
-    }, {
-        icon: "bi bi-tiktok",
-        link: "https://tiktok.com/@mazenturk"
-    }, {
-        icon: "bi bi-basket2-fill",
-        link: "https://payhip.com/mazenturk"
-    },{
-        icon: "bi bi-cup-hot-fill",
-        link: "https://buymeacoffee.com/maznktrl"
-    }
+const mediaLinks = [{
+  icon: "bi bi-facebook",
+  link: "https://www.facebook.com/mazen.turk.269412/"
+}, {
+  icon: "bi bi-github",
+  link: "https://github.com/MazenTurk201/"
+}, {
+  icon: "bi bi-whatsapp",
+  link: "https://wa.me/201092130013?text=Hi+Turk"
+}, {
+  icon: "bi bi-telegram",
+  link: "https://t.me/mazenturk"
+}, {
+  icon: "bi bi-discord",
+  link: "https://discord.com/channels/@me/983875402651021353"
+}, {
+  icon: "bi bi-linkedin",
+  link: "https://www.linkedin.com/in/mazen-sameh-19a0a2302/"
+}, {
+  icon: "bi bi-instagram",
+  link: "https://instagram.com/mazenturkk"
+}, {
+  icon: "bi bi-paypal",
+  link: "https://www.paypal.com/paypalme/fesbok"
+}, {
+  icon: "bi bi-youtube",
+  link: "https://www.youtube.com/@mazenturk"
+}, {
+  icon: "bi bi-tiktok",
+  link: "https://tiktok.com/@mazenturk"
+}, {
+  icon: "bi bi-basket2-fill",
+  link: "https://payhip.com/mazenturk"
+}, {
+  icon: "bi bi-cup-hot-fill",
+  link: "https://buymeacoffee.com/maznktrl"
+}];
+
+const donateLinks = [
+  {
+    icon: "https://drashrafsoliman.com/wp-content/uploads/2022/06/vc.png",
+    name: "Vodafone Cash",
+    link: "tel:*9*7*01092130013*20#"
+  }, {
+    icon: "https://play-lh.googleusercontent.com/Pv1p8v-KJq4Z_LLOjQjBZpK8DNJg4Zb5aNOQY7WfoiHR4Gfs165Z1TTNMThZ883Yfg=w240-h480-rw",
+    name: "Instapay",
+    link: "https://ipn.eg/S/mazenturk201/instapay/6rKTP3"
+  }, {
+    icon: "https://mazenturk201.github.io/Love-Choice/assets/images/paypal.png",
+    name: "PayPal",
+    link: "https://www.paypal.com/paypalme/fesbok"
+  }, {
+    icon: "https://cdn6.aptoide.com/imgs/d/3/4/d348ecefc59798c34d2be3507044163c_icon.png",
+    name: "Orange Cash",
+    link: "tel:*115*1*1*01092130013*20#"
+  }, {
+    icon: "https://www.eand.com.eg/portal/images/etisalat-cash-logo.png",
+    name: "Etisalat Cash",
+    link: "tel:*777*01092130013*20#"
+  }, {
+    icon: "https://play-lh.googleusercontent.com/6XZKvhiCf64MnUVMl6KqcWKq97dzql9OVD9ctaNnt1VTtJS3RE6Dsk6GCM7e_8nnOzE=w400-h300-pc0xffffff-pd",
+    name: "WE Pay",
+    link: "tel:*322*20*01092130013#"
+  }, {
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9Iv9fWFShIajbXxO4jHtRyvK9HPiVpPtK0b1XjR_SRIbhM2JeJmuNeCHQEExnVh890Q&usqp=CAU",
+    name: "Buy me a Coffee",
+    link: "https://buymeacoffee.com/maznktrl"
+  }
 ];
 
-
-export { jobsName, skills, mediaLinks };
+export { jobsName, skills, mediaLinks, donateLinks };

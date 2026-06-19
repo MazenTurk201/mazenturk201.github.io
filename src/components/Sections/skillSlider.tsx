@@ -1,5 +1,5 @@
 "use client";
-import Skill from "@/components/Widgets/skillWedgit";
+import Skill from "@/components/Widgets/skillWidgets";
 import { skills } from "@/components/Data/globalData";
 // بنجيب المكونات الأساسية من Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';

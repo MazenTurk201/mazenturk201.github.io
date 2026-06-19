@@ -1,13 +1,13 @@
-import scrolltotext from "@/components/Widgets/scrollRevalWedgit";
+import scrolltotext from "@/components/Widgets/scrollRevalWidgets";
 import AboutSection from "@/components/Sections/aboutSection";
 import HeaderContent from "@/components/Sections/headerContentWedgit";
-import ProjectsSlider from '../Sections/tabsProject';
-import SkillSlider from '../Sections/skillSlider';
+import ProjectsSlider from "@/components/Sections/tabsProject";
+import SkillSlider from "@/components/Sections/skillSlider";
 
 
 export default function Main() {
     return (
-        <>
+        <main className="flex flex-1 w-full flex-col items-center justify-between py-22 md:pt-32 px-16 bg-white dark:bg-black not-sm:p-5">
             <HeaderContent />
             <div className="flex flex-col items-center justify-center">
                 <h1 className="text-3xl not-sm:text-xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center">
@@ -44,6 +44,6 @@ export default function Main() {
                 </h1>
                 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Use AI" className="w-full md:w-auto h-auto object-cover" />
             </section>
-        </>
+        </main>
     )
 }

@@ -6,6 +6,17 @@ import { Link } from "react-router-dom";
 const SidebarDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  function ItemDrawer(path: string, name: string) {
+    return (
+      <li className="py-2">
+        <Link to={path} className="" onClick={() => setIsOpen(false)}>
+          {AnimatedBlurText(name, "bottom", 200)}
+        </Link>
+      </li>
+    );
+  }
+
+
   return (
     <div className="relative">
       {/* الزرار اللي بيفتح ويقفل  */}
@@ -28,10 +39,11 @@ const SidebarDrawer = () => {
         <div className="p-4 pt-20">
           <h2 className="text-3xl font-bold relative -top-15 -left-10">Welcome!!</h2>
           <ul className="-mt-10">
-            <li className="py-2"><Link to="/" className="">{AnimatedBlurText("Main", "top", 200)}</Link></li>
-            <li className="py-2"><Link to="/contact" className="">{AnimatedBlurText("Contact", "bottom", 170)}</Link></li>
-            <li className="py-2"><Link to="/about" className="">{AnimatedBlurText("About", "bottom", 150)}</Link></li>
-            <li className="py-2"><Link to="/services" className="">{AnimatedBlurText("Services", "bottom", 130)}</Link></li>
+            {ItemDrawer("/", "Main")}
+            {ItemDrawer("/contact", "Contact")}
+            {ItemDrawer("/donate", "Donate")}
+            {ItemDrawer("/about", "About")}
+            {ItemDrawer("/services", "Services")}
           </ul>
         </div>
       </div>
