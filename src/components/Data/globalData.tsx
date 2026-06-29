@@ -114,12 +114,12 @@ const skills = [
     title: "Linux",
     tags: [
       "Bash",
+      "THM Top 2%",
       "Shell Scripting",
       "Nmap",
       "Metasploit",
       "System Admin",
       "Terminal",
-      "THM Top 20%",
       "APK Tools",
     ],
     icon: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Linux_mascot_tux.png",
@@ -293,7 +293,70 @@ const donateLinks = [
     icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY9Iv9fWFShIajbXxO4jHtRyvK9HPiVpPtK0b1XjR_SRIbhM2JeJmuNeCHQEExnVh890Q&usqp=CAU",
     name: "Buy me a Coffee",
     link: "https://buymeacoffee.com/maznktrl"
+  }, {
+    icon: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Tether_USDT.png",
+    name: "Crypto USDT (BSC/BEP20)",
+    link: "0x2b92032fdba5f017007306f89b55e7336c82883a",
+    isCopy: true
   }
 ];
 
-export { jobsName, skills, mediaLinks, donateLinks };
+interface SubOption {
+    id: string;
+    name: string;
+    price: number;
+}
+
+interface ServiceItem {
+    id: string;
+    name: string;
+    price: number;
+    subOptions?: SubOption[];
+}
+
+interface ServiceCategory {
+    categoryName: string;
+    items: ServiceItem[];
+}
+
+const servicesData: ServiceCategory[] = [
+    {
+        categoryName: "خدمات الهارد وير",
+        items: [
+            { 
+                id: "win_install", 
+                name: "تنزيل نسخة ويندوز", 
+                price: 10,
+                subOptions: [
+                    { id: "win11", name: "ويندوز 11 الأصلي", price: 5 },
+                    { id: "office", name: "حزمة أوفيس كاملة", price: 5 }
+                ]
+            },
+            { id: "pc_clean", name: "تنظيف الكيسة وتغيير المعجون البارد", price: 15 }
+        ]
+    },
+    {
+        categoryName: "خدمات المواقع",
+        items: [
+            { 
+                id: "web_dev", 
+                name: "برمجة موقع كامل (React)", 
+                price: 150,
+                subOptions: [
+                    { id: "dashboard", name: "لوحة تحكم إدارية", price: 50 },
+                    { id: "seo", name: "تهيئة سيو SEO", price: 20 }
+                ]
+            },
+            { id: "landing_page", name: "تصميم صفحة هبوط (Landing Page)", price: 40 }
+        ]
+    },
+    {
+        categoryName: "خدمات الموبايل",
+        items: [
+            { id: "flutter_app", name: "برمجة تطبيق موبايل (Flutter)", price: 200 },
+            { id: "app_publish", name: "رفع التطبيق على جوجل بلاي", price: 30 }
+        ]
+    }
+];
+
+export { jobsName, skills, mediaLinks, donateLinks, servicesData };

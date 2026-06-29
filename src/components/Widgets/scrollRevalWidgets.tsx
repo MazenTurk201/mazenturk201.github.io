@@ -1,14 +1,17 @@
-import ScrollReveal from '../../../components/ScrollReveal';
+import ScrollReveal from '../ReactBits/ScrollReveal';
 
-function scrolltotext(Text: string) {
+type ScrollToTextProps = {
+    text: string;
+};
+
+export default function ScrollToText({ text }: ScrollToTextProps) {
     return <ScrollReveal
         baseOpacity={0.1}
         enableBlur
         baseRotation={3}
         blurStrength={4}
+        textClassName='whitespace-pre-line'
     >
-        {Text}
+        {text}
     </ScrollReveal>
 };
-
-export default scrolltotext;

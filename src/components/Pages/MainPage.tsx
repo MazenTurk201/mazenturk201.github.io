@@ -1,8 +1,9 @@
-import scrolltotext from "@/components/Widgets/scrollRevalWidgets";
 import AboutSection from "@/components/Sections/aboutSection";
 import HeaderContent from "@/components/Sections/headerContentWedgit";
 import ProjectsSlider from "@/components/Sections/tabsProject";
 import SkillSlider from "@/components/Sections/skillSlider";
+import ScrollToText from "@/components/Widgets/scrollRevalWidgets";
+import ScrollFloat from "@/components/ReactBits/ScrollFloat";
 
 
 export default function Main() {
@@ -19,29 +20,44 @@ export default function Main() {
                     <a
                         className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-39.5"
                         href="#Projects"
-                        rel="noopener noreferrer"
-                    >
+                        rel="noopener noreferrer">
                         Projects
                     </a>
                     <a
                         className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/8 px-5 transition-colors hover:border-transparent hover:bg-black/4 dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-39.5"
                         href="https://drive.google.com/file/d/1EQm8UMcZYuxtKoGnh1HtX8kROkMz5MCz/view?usp=sharing"
                         target='_blank'
-                        rel="noopener noreferrer"
-                    >
+                        rel="noopener noreferrer">
                         Open CV
                     </a>
                 </div>
                 <div className="h-50"></div>
-                {scrolltotext("I am an IT engineer and Software Developer with\nexperience in developing user interfaces,\nwebsites, databases, and APIs. I have strong\nknowledge of networks, servers, cameras, and\nconnectivity systems, with a passion for learning\nnew technologies and building impactful projects.\nI also develop applications using Flutter and Dart,\ngiving me the ability to efficiently create crossplatform solutions. I am looking to join a team\nwhere I can contribute, grow, and build highquality products.")}
+                <ScrollToText text={`
+                    I am an IT engineer and Software Developer with
+                    experience in developing user interfaces,
+                    websites, databases, and APIs. I have strong
+                    knowledge of networks, servers, cameras, and
+                    connectivity systems, with a passion for learning
+                    new technologies and building impactful projects.
+                    I also develop applications using Flutter and Dart,
+                    giving me the ability to efficiently create crossplatform solutions.
+                    I am looking to join a team
+                    where I can contribute, grow, and build highquality products.
+                `} />
             </div>
             <AboutSection />
             <SkillSlider />
             <ProjectsSlider />
             <section id='End' className='min-h-100 m-0 p-0'>
-                <h1 className='text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center'>
+                <ScrollFloat
+                    animationDuration={1}
+                    ease='back.inOut(2)'
+                    scrollStart='center bottom+=50%'
+                    scrollEnd='bottom bottom-=40%'
+                    stagger={0.03}
+                >
                     ✍️ Random Dev Quote
-                </h1>
+                </ScrollFloat>
                 <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Use AI" className="w-full md:w-auto h-auto object-cover" />
             </section>
         </main>

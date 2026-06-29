@@ -13,9 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@floating-ui/react": "^0.27.19",
+    "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.3.0",
     "bootstrap-icons": "^1.13.1",
+    "cloudinary": "^2.10.0",
     "clsx": "^2.1.1",
     "flyonui": "^2.4.1",
     "framer-motion": "^11.0.8",
@@ -25,7 +28,7 @@
     "radix-ui": "^1.4.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "react-multi-carousel": "^2.8.6",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.18.0",
     "react-syntax-highlighter": "^16.1.1",
     "react-type-animation": "^3.2.0",

@@ -1,4 +1,4 @@
-import BlurText from "../../../components/BlurText";
+import BlurText from "../ReactBits/BlurText";
 
 function AnimatedBlurText(Text: string, Direction: "top" | "bottom" = "top", Delay: number = 90, isTitle: boolean = false) {
   return (

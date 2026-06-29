@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { MenuIcon } from "../../../@/components/ui/menu";
 import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
 import { Link } from "react-router-dom";
 
@@ -21,7 +20,7 @@ const SidebarDrawer = () => {
     <div className="relative">
       {/* الزرار اللي بيفتح ويقفل  */}
       {/* sm:hidden */}
-      <MenuIcon onClick={() => setIsOpen(!isOpen)} className="menuiconbutton" />
+      <i onClick={() => setIsOpen(!isOpen)} className="menuiconbutton bi bi-list"></i>
 
       {/* الـ Overlay اللي بيقفل لما تدوس عليه */}
       {isOpen && (

@@ -35,14 +35,14 @@ export default function SkillSlider() {
           },
           // لما الشاشة تكون أكبر من أو تساوي 1024px (الديسك توب)
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
         }}
-        className="" // تقدر تضيف أي ستايل إضافي هنا
+        className="w-full" // تقدر تضيف أي ستايل إضافي هنا
       >
         {skills.map((skillInfo, index) => (
           // كل كارت لازم يتحط جوه المكون ده الخاص بـ Swiper
-          <SwiperSlide key={index} className="flex items-center justify-center pt-20 pb-20 w-full"> 
+          <SwiperSlide key={index} className="flex items-center justify-center pt-50 md:pt-20 pb-40 md:pb-20 w-full"> 
             <Skill
               title={skillInfo.title}
               tags={skillInfo.tags}

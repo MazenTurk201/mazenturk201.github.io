@@ -21,7 +21,7 @@ function NavBar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <nav className={`w-full h-16 flex items-center justify-between px-8 fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 dark:bg-black/30 backdrop-blur drop-shadow-2xl' : 'bg-transparent'}`}>
+    <nav className={`max-w-dvw h-16 flex items-center justify-between px-8 fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/30 dark:bg-black/30 backdrop-blur drop-shadow-2xl' : 'bg-transparent'}`}>
       <div className="flex items-center gap-5">
         <img src={Logo} alt="Logo" className="w-10 h-10" />
         <div className='not-sm:hidden'>{AnimatedBlurText("Mazen Sameh", "top", 90, true)}</div>
