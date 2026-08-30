@@ -286,7 +286,7 @@ const donateLinks = [
     name: "Etisalat Cash",
     link: "tel:*777*01092130013*20#"
   }, {
-    icon: "https://play-lh.googleusercontent.com/6XZKvhiCf64MnUVMl6KqcWKq97dzql9OVD9ctaNnt1VTtJS3RE6Dsk6GCM7e_8nnOzE=w400-h300-pc0xffffff-pd",
+    icon: "https://play-lh.googleusercontent.com/RHj9H01qk_KoZkkNACWqucGlGv_oeEh6AXBpDDikTfbLABetwGT4cRKZnaz0D0ml0bgrWXyt4dBopuRFMEHZ=w240-h480-rw",
     name: "WE Pay",
     link: "tel:*322*20*01092130013#"
   }, {
@@ -294,8 +294,8 @@ const donateLinks = [
     name: "Buy me a Coffee",
     link: "https://buymeacoffee.com/maznktrl"
   }, {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Tether_USDT.png",
-    name: "Crypto USDT (BSC/BEP20)",
+    icon: "https://cdn-icons-png.flaticon.com/512/1978/1978543.png",
+    name: "Crypto (BSC/BEP20)",
     link: "0x2b92032fdba5f017007306f89b55e7336c82883a",
     isCopy: true
   }
