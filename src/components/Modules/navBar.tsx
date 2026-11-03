@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Logo from '../../../src/assets/images/MT.png';
-import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
+import AnimatedBlurText from "@/components/animate-ui/animatedBlurText";
 import SidebarDrawer from "@/components/Modules/drawer";
 
 

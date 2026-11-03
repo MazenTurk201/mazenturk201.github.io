@@ -16,7 +16,7 @@ class Turk:
     self.city = "Cairo"
     self.university = "6th of October Technological"
     self.skills = ["Python", "Flutter", "Embedded Systems"]
-    self.certificates = 13
+    self.certificates = 14
     self.status = "Developing cool stuff"
 
   def __str__(self):

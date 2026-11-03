@@ -22,7 +22,7 @@ const projects = [
     },
 
     {
-        cover: "/Images/wpbe.png",
+        cover: "/Images/wpbe.webp",
         title: "ResWA",
         description: "Restore Whatsapp Chats.",
         linkProj: "https://mazenturk201.github.io/ResWA/",

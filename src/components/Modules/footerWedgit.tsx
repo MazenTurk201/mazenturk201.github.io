@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from '@/components/Utilties/animate-ui/components/radix/accordion';
+} from '@/components/animate-ui/components/radix/accordion';
 
 function ListItem(Title: string, Link: string) {
   return <li>

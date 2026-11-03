@@ -1,4 +1,4 @@
-import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
+import AnimatedBlurText from "@/components/animate-ui/animatedBlurText";
 
 export default function About() {
     return (

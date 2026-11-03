@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AnimatedBlurText from "@/components/Utilties/animatedBlurText";
+import AnimatedBlurText from "@/components/animate-ui/animatedBlurText";
 import { Link } from "react-router-dom";
 
 const SidebarDrawer = () => {
@@ -43,6 +43,7 @@ const SidebarDrawer = () => {
             {ItemDrawer("/donate", "Donate")}
             {ItemDrawer("/about", "About")}
             {ItemDrawer("/services", "Services")}
+            {ItemDrawer("/payment", "Payment")}
           </ul>
         </div>
       </div>

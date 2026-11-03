@@ -57,3 +57,38 @@ export default function SkillSlider() {
     </div>
   );
 }
+
+
+// import {
+//   CarouselCounter,
+//   CarouselDots,
+// } from '@animate-ui/react/primitives/carousel';
+
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from '@/components/ui/carousel';
+
+// export function Gallery() {
+//   return (
+//     <Carousel opts={{ loop: true, align: 'center', scale: 0.8, visible: 3 }}>
+//       <CarouselContent className="-ml-1">
+//         {Array.from({ length: 5 }).map((_, index) => (
+//           <CarouselItem key={index} className="pl-1">
+//             <img
+//               src={`/photo-${index}.jpg`}
+//               className="aspect-square rounded-xl object-cover"
+//             />
+//           </CarouselItem>
+//         ))}
+//       </CarouselContent>
+//       <CarouselPrevious />
+//       <CarouselNext />
+//       <CarouselDots />
+//       <CarouselCounter />
+//     </Carousel>
+//   );
+// }
