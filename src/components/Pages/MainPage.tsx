@@ -4,12 +4,14 @@ import ProjectsSlider from "@/components/Sections/tabsProject";
 import SkillSlider from "@/components/Sections/skillSlider";
 import ScrollToText from "@/components/Widgets/scrollRevalWidgets";
 import ScrollFloat from "@/components/ReactBits/ScrollFloat";
+import ScrollButton from "../Modules/scrollButton";
 
 
 export default function Main() {
     return (
         <main className="flex flex-1 w-full flex-col items-center justify-between py-22 md:pt-32 px-16 bg-white dark:bg-black not-sm:p-5">
             <HeaderContent />
+            <ScrollButton />
             <div className="flex flex-col items-center justify-center">
                 <h1 className="text-3xl not-sm:text-xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50 text-center">
                     Mazen Sameh Sayed <sub className="text-sm text-zinc-500 dark:text-zinc-400">(Turk)</sub>

@@ -40,7 +40,7 @@ const projects = [
     },
 
     {
-        cover: "https://geekpython.in/wp-content/uploads/2023/08/FlaskxDB.png",
+        cover: "https://nordicapis.com/wp-content/uploads/How-to-Create-an-API-Using-The-Flask-Framework.png",
         title: "Management System",
         description: "Project Management DB.",
         linkProj: "https://github.com/MazenTurk201/ProjectManagementDB",

@@ -339,42 +339,32 @@ const servicesData: ServiceCategory[] = [
       {
         id: "cctv_analog_install",
         name: "تركيب كاميرا Analog HD (مصنعية)",
-        price: 300,
-        subOptions: [
-          { id: "cctv_2mp", name: "كاميرا 2MP", price: 0 },
-          { id: "cctv_5mp", name: "كاميرا 5MP", price: 100 },
-          { id: "cctv_8mp", name: "كاميرا 8MP", price: 200 }
-        ]
-      },
-      { id: "cctv_ip_install", name: "تركيب كاميرا IP", price: 450 },
-      { id: "cctv_wifi_install", name: "تركيب كاميرا Wi-Fi", price: 300 },
-      { id: "cctv_cable", name: "تمديد كابل كاميرات لكل نقطة", price: 150 },
-      { id: "cctv_bnc", name: "تركيب رأس BNC / DC", price: 10 },
-      { id: "cctv_dvr", name: "تركيب وإعداد DVR", price: 400 },
-      { id: "cctv_nvr", name: "تركيب وإعداد NVR", price: 500 },
-      {
-        id: "cctv_mobile",
-        name: "ربط كاميرات المراقبة بالموبايل",
         price: 250,
         subOptions: [
-          { id: "hik_connect", name: "Hik-Connect", price: 50 },
+          { id: "cctv_2mp", name: "كاميرا 2MP", price: 0 },
+          { id: "cctv_5mp", name: "كاميرا 5MP", price: 50 },
+          { id: "cctv_8mp", name: "كاميرا 4K / 8MP", price: 100 }
         ]
       },
-      { id: "cctv_repair", name: "صيانة DVR/NVR", price: 350 },
-      { id: "cctv_no_signal", name: "حل مشكلة No Signal", price: 200 },
-      { id: "cctv_maintenance", name: "صيانة كاميرا مراقبة", price: 100 },
-      { id: "cctv_site", name: "معاينة موقع تركيب كاميرات", price: 200 },
+      { id: "cctv_ip_install", name: "تركيب كاميرا IP (مصنعية)", price: 500 },
+      { id: "cctv_wifi_install", name: "تركيب وبرمجة كاميرا Wi-Fi Smart", price: 350 },
+      { id: "cctv_cable", name: "تمديد كابل كاميرا (لكل نقطة شامل التثبيت)", price: 200 },
+      { id: "cctv_bnc", name: "تركيب وتجميع رؤوس BNC / DC / RJ45", price: 25 },
+      { id: "cctv_dvr", name: "تركيب وإعداد DVR / NVR وتثبيت الهارد", price: 500 },
+      { id: "cctv_mobile", name: "ربط كاميرات المراقبة بالموبايل", price: 100 },
+      { id: "cctv_repair", name: "صيانة أجهزة DVR/NVR واسترجاع التسجيلات", price: 400 },
+      { id: "cctv_maintenance", name: "صيانة وفحص كاميرا مراقبة", price: 150 },
       {
         id: "cctv_package_4",
-        name: "باقة 4 كاميرات Analog كاملة دقة 2MP",
-        price: 7000,
+        name: "باقة 4 كاميرات Analog كاملة (2MP + DVR + 1TB + التركيب)",
+        price: 3000,
         subOptions: [
-          { id: "cctv_4_hd", name: "دقة 5MP", price: 2000 },
-          { id: "cctv_4_mobile", name: "إضافة ربط بالموبايل", price: 300 }
+          { id: "cctv_4_hd", name: "ترقية لدقة 5MP", price: 500 },
+          { id: "cctv_4_mobile", name: "إضافة ربط مباشر بالموبايل", price: 100 },
+          { id: "cctv_4_windows", name: "إضافة ربط مباشر الويندوز", price: 150 }
         ]
       },
-      { id: "cctv_package_ip", name: "باقة 4 كاميرات IP كاملة", price: 13000 },
-      { id: "cctv_package_8", name: "باقة 8 كاميرات كاملة", price: 18000 }
+      { id: "cctv_package_ip", name: "باقة 4 كاميرات IP كاملة (PoE + NVR + 1TB)", price: 5000 },
     ]
   },
   {
@@ -382,147 +372,154 @@ const servicesData: ServiceCategory[] = [
     items: [
       {
         id: "windows",
-        name: "تنزيل Windows",
+        name: "تنزيل Windows أصلية بالبرامج الأساسية",
         price: 150,
         subOptions: [
-          { id: "win10", name: "Windows 10", price: 0 },
-          { id: "win11", name: "Windows 11", price: 0 },
-          { id: "win_lite", name: "Windows مخفف", price: 50 },
-          { id: "office", name: "تثبيت Microsoft Office", price: 100 },
-          { id: "drivers", name: "تثبيت جميع التعريفات", price: 50 },
+          { id: "winxp", name: "Windows XP", price: 0 },
+          { id: "win7", name: "Windows 7 Pro", price: 0 },
+          { id: "win10", name: "Windows 10 Pro", price: 0 },
+          { id: "win11", name: "Windows 11 Pro", price: 0 },
+          { id: "win_lite", name: "Windows مخفف للأداء العالي", price: 50 },
+          { id: "office", name: "تثبيت وتفعيل Microsoft Office", price: 100 },
+          { id: "drivers", name: "تثبيت وتحديث جميع التعريفات", price: 50 }
         ]
       },
-      { id: "pc_clean", name: "تنظيف الكيسة Desktop", price: 100 },
-      { id: "laptop_clean", name: "تنظيف اللاب توب داخلياً", price: 100 },
+      { 
+        id: "linux_install",
+        name: "تثبيت وإعداد نظام Linux (Fedora / Ubuntu) وتضبيط البيئة",
+        price: 100,
+        subOptions: [
+          { id: "kali", name: "Kali Linux", price: 100 },
+          { id: "fedora", name: "Fedora Linux", price: 0 },
+          { id: "ubuntu", name: "Ubuntu Linux", price: 0 },
+          { id: "debian", name: "Debian Linux", price: 0 },
+          { id: "parrot", name: "Parrot OS", price: 0 },
+          { id: "arch", name: "Arch Linux", price: 200 },
+          { id: "black_arch", name: "Black Arch Linux", price: 250 },
+        ]
+      },
+      { id: "pc_clean", name: "تنظيف كيسة Desktop وتنسيق الكابلات", price: 50 },
+      { id: "laptop_clean", name: "تنظيف اللاب توب داخلياً وإزالة الأتربة", price: 100 },
       { id: "thermal", name: "تغيير المعجون الحراري", price: 50 },
-      { id: "full_maintenance", name: "تنظيف وتغيير معجون", price: 150 },
-      { id: "ssd_install", name: "تركيب SSD", price: 100 },
-      { id: "ram_upgrade", name: "ترقية RAM", price: 150 },
-      { id: "windows_ssd", name: "نقل Windows إلى SSD", price: 200 },
-      { id: "partition", name: "تقسيم وتنظيم الهارد", price: 50 },
-      { id: "driver_repair", name: "حل مشاكل التعريفات", price: 150 },
-      { id: "data_backup", name: "نسخ احتياطي للبيانات", price: 200 },
-      { id: "data_recovery", name: "استعادة بيانات بسيطة", price: 300 },
-      { id: "bypass_windows", name: "إزالة باسورد الويندوز", price: 150 }
+      { id: "ssd_install", name: "تركيب SSD ونقل النظام بالكامل (Cloning)", price: 200 },
+      { id: "ram_upgrade", name: "ترقية وتركيب RAM واختبار الاستقرار", price: 150 },
+      { id: "data_backup", name: "نسخ احتياطي ونقل بيانات", price: 250 },
+      { id: "data_recovery", name: "محاولة استعادة الملفات المحذوفة أو من هارد تالف", price: 500 },
+      { id: "bypass_windows", name: "إزالة وفك باسورد الويندوز", price: 200 }
     ]
   },
   {
-    categoryName: "الشبكات والإنترنت",
+    categoryName: "الشبكات والإنترنت وتجهيز السيرفرات",
     items: [
-      { id: "router_setup", name: "إعداد راوتر جديد", price: 200 },
-      { id: "wifi_config", name: "ضبط إعدادات Wi-Fi", price: 100 },
-      { id: "access_point", name: "إعداد Access Point", price: 250 },
-      { id: "range_extender", name: "تركيب Range Extender", price: 200 },
-      { id: "ethernet", name: "تمديد كابل Ethernet", price: 75 },
-      { id: "rj45", name: "تركيب رأس RJ45", price: 20 },
-      { id: "lan_setup", name: "إعداد شبكة LAN", price: 300 },
-      { id: "network_sharing", name: "مشاركة الملفات والطابعات", price: 25 },
-      { id: "static_ip", name: "إعداد Static IP", price: 10 }
+      { id: "router_setup", name: "إعداد راوتر جديد وتأمين شبكة الواي فاي", price: 200 },
+      { id: "wifi_config", name: "ضبط وتحسين إشارات Wi-Fi", price: 150 },
+      { id: "access_point", name: "إعداد وبرمجة Access Point", price: 300 },
+      { id: "range_extender", name: "تركيب وبرمجة Range Extender", price: 250 },
+      { id: "ethernet", name: "تمديد كابل Ethernet وإختباره بالنقطة", price: 150 },
+      { id: "rj45", name: "تركيب وانكماش رأس RJ45", price: 25 },
+      { id: "lan_setup", name: "إعداد وتأسيس شبكة LAN للأجهزة", price: 400 },
+      { id: "rack_setup", name: "تجميع وترتيب راك الشبكات (Network Rack Management)", price: 1200 },
+      { id: "mikrotik_setup", name: "إعداد وبرمجة سيرفر مايكروتك (MikroTik) وتوزيع السرعات", price: 1500 },
+      { id: "network_sharing", name: "مشاركة الملفات والطابعات عبر الشبكة المحلية", price: 200 },
+      { id: "static_ip", name: "إعداد Static IP وتوجيه المنافذ", price: 200 }
     ]
   },
   {
     categoryName: "الطابعات والماسحات الضوئية",
     items: [
-      { id: "printer_driver", name: "تثبيت تعريف الطابعة", price: 25 },
-      { id: "printer_wifi", name: "توصيل الطابعة Wi-Fi", price: 25 },
-      { id: "printer_network", name: "مشاركة الطابعة على الشبكة", price: 25 },
-      { id: "printer_fix", name: "حل مشاكل الطباعة", price: 50 },
-      { id: "printer_clean", name: "تنظيف الطابعة", price: 50 },
-      { id: "printer_repair", name: "صيانة أعطال الطابعة", price: 100 }
+      { id: "printer_driver", name: "تثبيت تعريف الطابعة وتضبيطها", price: 100 },
+      { id: "printer_wifi", name: "توصيل وبرمجة الطابعة Wi-Fi", price: 150 },
+      { id: "printer_network", name: "مشاركة الطابعة على شبكة المكتب", price: 200 },
+      { id: "printer_fix", name: "حل مشاكل الورق والتعليق والطباعة", price: 150 },
+      { id: "printer_clean", name: "تنظيف رؤوس الحبر والبيبر بات", price: 200 },
+      { id: "printer_repair", name: "صيانة أعطال الطابعات الميكانيكية", price: 350 }
     ]
   },
   {
-    categoryName: "تصميم وبرمجة المواقع",
+    categoryName: "تصميم وبرمجة المواقع (Full-Stack / React / TS)",
     items: [
-      { id: "landing_page", name: "تصميم Landing Page", price: 5000 },
-      { id: "portfolio", name: "إنشاء Portfolio شخصي", price: 6000 },
-      { id: "business_website", name: "موقع شركة تعريفي", price: 12000 },
-      { id: "multi_page", name: "موقع متعدد الصفحات", price: 15000 },
-      { id: "bilingual", name: "موقع عربي وإنجليزي", price: 18000 },
-      { id: "ecommerce", name: "متجر إلكتروني", price: 25000 },
-      { id: "dashboard", name: "لوحة تحكم Admin Dashboard", price: 5000 },
-      { id: "responsive", name: "تحسين Responsive Design", price: 2000 },
-      { id: "api_frontend", name: "ربط الموقع بـ API", price: 1500 },
-      { id: "website_auth", name: "تسجيل دخول وحسابات مستخدمين", price: 2500 },
-      { id: "cms", name: "نظام إدارة محتوى CMS", price: 4000 },
-      { id: "seo", name: "تهيئة SEO أساسية", price: 1000 },
-      { id: "speed", name: "تحسين سرعة الموقع", price: 1000 },
-      { id: "deploy_web", name: "نشر الموقع واستضافته", price: 750 },
-      { id: "website_maintenance", name: "صيانة الموقع شهرياً", price: 500 }
+      { id: "landing_page", name: "تصميم وتنفيذ Landing Page احترافية", price: 500 },
+      { id: "portfolio", name: "إنشاء Portfolio شخصي مميز", price: 1000 },
+      { id: "business_website", name: "موقع شركة تعريفي متكامل", price: 12000 },
+      { id: "multi_page", name: "موقع متعدد الصفحات (Multi-page App)", price: 6000 },
+      { id: "bilingual", name: "موقع ثنائي اللغة (عربي / إنجليزي)", price: 1000 },
+      { id: "ecommerce", name: "متجر إلكتروني متكامل", price: 5000 },
+      { id: "dashboard", name: "لوحة تحكم Admin Dashboard مخصصة", price: 3000 },
+      { id: "responsive", name: "تحسين وتضبيط Responsive Design للموبايل", price: 2500 },
+      { id: "website_auth", name: "نظام تسجيل دخول وحسابات مستخدمين", price: 3000 },
+      { id: "seo", name: "تهيئة محركات البحث SEO أساسية", price: 1500 },
+      { id: "deploy_web", name: "نشر الموقع، إعداد الدومين والاستضافة (Deployment)", price: 1500 },
     ]
   },
   {
     categoryName: "أنظمة الشركات والإدارة ERP",
     items: [
-      { id: "employee_system", name: "نظام إدارة الموظفين", price: 5000 },
-      { id: "inventory", name: "نظام إدارة المخازن", price: 5000 },
-      { id: "sales_system", name: "نظام المبيعات والفواتير", price: 15000 },
-      { id: "pos", name: "نظام POS للكاشير", price: 8000 },
-      { id: "cafe_system", name: "نظام إدارة مطعم أو كافيه", price: 10000 },
-      { id: "clinic_system", name: "نظام إدارة عيادة", price: 10000 },
-      { id: "erp", name: "نظام ERP متكامل", price: 40000 },
-      { id: "crm", name: "نظام CRM لإدارة العملاء", price: 15000 },
-      { id: "booking", name: "نظام حجوزات", price: 12000 },
-      { id: "attendance", name: "نظام حضور وانصراف", price: 1000 },
-      { id: "delivery", name: "نظام إدارة التوصيل", price: 5000 },
-      { id: "dynamic_permissions", name: "نظام صلاحيات ديناميكي", price: 1000 },
-      { id: "roles", name: "نظام Roles & Permissions", price: 4000 },
-      { id: "admin_dashboard", name: "لوحة تحكم إدارية", price: 2000 },
-      { id: "reports", name: "تقارير وإحصائيات", price: 2500 },
-      { id: "signalr", name: "إشعارات لحظية باستخدام SignalR", price: 3000 }
+      { id: "employee_system", name: "نظام إدارة الموظفين وشؤون العاملين", price: 6000 },
+      { id: "inventory", name: "نظام إدارة المخازن وحركة البضائع", price: 5000 },
+      { id: "sales_system", name: "نظام المبيعات وحساب الفواتير", price: 6000 },
+      { id: "pos", name: "نظام نقاط البيع للكاشير (POS)", price: 9000 },
+      { id: "cafe_system", name: "نظام إدارة المطاعم والكافيهات", price: 9000 },
+      { id: "clinic_system", name: "نظام إدارة العيادات الطبية", price: 9000 },
+      { id: "erp", name: "نظام ERP متكامل للشركات", price: 15000 },
+      { id: "booking", name: "نظام حجوزات وإدارة مواعيد", price: 10000 },
+      { id: "attendance", name: "نظام حضور وانصراف مرتبط بالبصمة", price: 2500 },
+      { id: "delivery", name: "نظام إدارة التوصيل والدليفري", price: 6000 },
+      { id: "roles", name: "نظام الصلاحيات الديناميكي Roles & Permissions", price: 4000 },
+      { id: "reports", name: "تقارير مالية وإحصائيات متقدمة", price: 3000 },
+      { id: "signalr", name: "إشعارات لحظية وتحديثات بـ SignalR", price: 3500 }
     ]
   },
   {
     categoryName: "برمجة Backend و ASP.NET Core",
     items: [
-      { id: "web_api", name: "إنشاء ASP.NET Core Web API", price: 4000 },
-      { id: "crud", name: "إنشاء CRUD API", price: 500 },
-      { id: "jwt", name: "نظام Authentication باستخدام JWT", price: 1000 },
-      { id: "identity", name: "إعداد ASP.NET Identity", price: 1000 },
-      { id: "sql_connect", name: "ربط SQL Server", price: 100 },
-      { id: "db_design", name: "تصميم Database Schema", price: 1500 },
-      { id: "ef_core", name: "إعداد Entity Framework Core", price: 100 },
-      { id: "migrations", name: "إعداد Database Migrations", price: 150 },
-      { id: "authorization", name: "نظام Authorization وصلاحيات", price: 100 },
-      { id: "file_upload", name: "نظام رفع الملفات والصور", price: 1000 },
-      { id: "email_service", name: "خدمة إرسال Email", price: 250 },
-      { id: "payment", name: "ربط Payment Gateway", price: 3000 },
-      { id: "swagger", name: "توثيق API باستخدام Swagger", price: 200 },
-      { id: "frontend_backend", name: "ربط Frontend مع Backend", price: 1000 }
+      { id: "web_api", name: "إنشاء ASP.NET Core Web API احترافية", price: 5000 },
+      { id: "crud", name: "إنشاء CRUD API متكاملة", price: 500 },
+      { id: "clean_arch", name: "هيكلة المشروع بـ Clean Architecture", price: 100 },
+      { id: "jwt", name: "نظام Authentication باستخدام JWT", price: 1500 },
+      { id: "identity", name: "إعداد ASP.NET Identity وإدارة المستخدمين", price: 1500 },
+      { id: "db_design", name: "تصميم Database Schema وعلاقات الجداول", price: 1000 },
+      { id: "ef_core", name: "إعداد وتحسين Entity Framework Core", price: 500 },
+      { id: "authorization", name: "نظام صلاحيات متقدم Role-Based / Policy-Based", price: 1000 },
+      { id: "file_upload", name: "نظام رفع ومعالجة الملفات والصور", price: 1000 },
+      { id: "email_service", name: "خدمة إرسال الإشعارات والإيميلات (SMTP)", price: 500 },
+      { id: "payment", name: "ربط بوابة دفع إلكتروني (Payment Gateway)", price: 2000 },
+      { id: "swagger", name: "توثيق واختبار API باستخدام Swagger", price: 500 },
+      { id: "frontend_backend", name: "ربط واجهة Frontend بـ ASP.NET Backend", price: 1500 }
     ]
   },
   {
     categoryName: "تطبيقات الموبايل Flutter",
     items: [
-      { id: "flutter_basic", name: "تطبيق Flutter بسيط", price: 12000 },
-      { id: "flutter_medium", name: "تطبيق Flutter متوسط", price: 20000 },
-      { id: "flutter_advanced", name: "تطبيق Flutter متقدم", price: 35000 },
-      { id: "flutter_store", name: "تطبيق متجر إلكتروني", price: 25000 },
-      { id: "flutter_restaurant", name: "تطبيق مطعم وطلبات", price: 20000 },
-      { id: "flutter_auth", name: "تسجيل دخول وحسابات", price: 4000 },
-      { id: "firebase", name: "ربط Firebase", price: 2500 },
-      { id: "firebase_auth", name: "Firebase Authentication", price: 1500 },
-      { id: "firestore", name: "ربط Cloud Firestore", price: 2000 },
-      { id: "push", name: "Push Notifications", price: 1500 },
-      { id: "google_signin", name: "Google Sign-In", price: 1000 },
-      { id: "sqlite", name: "SQLite / Local Database", price: 1500 },
-      { id: "flutter_api", name: "ربط التطبيق بـ REST API", price: 2000 },
-      { id: "play_store", name: "رفع التطبيق على Google Play", price: 1500 },
-      { id: "release", name: "تجهيز نسخة Release", price: 500 },
-      { id: "app_maintenance", name: "صيانة تطبيق شهرياً", price: 500 }
+      { id: "flutter_basic", name: "تطبيق Flutter مخصص", price: 1000, 
+        subOptions: [
+          { id: "flutter_basic_page", name: "صفحة إضافية", price: 100 },
+          { id: "flutter_basic_state", name: "State Management", price: 250 },
+          { id: "flutter_basic_firebase", name: "Firebase Integration", price: 100 },
+          { id: "flutter_basic_deep_linking", name: "Deep Linking", price: 250 },
+          { id: "flutter_basic_push_notifications", name: "Push Notifications", price: 150 },
+          { id: "flutter_basic_c", name: "Custom Features", price: 100 },
+          { id: "flutter_basic_animations", name: "Animations", price: 300 },
+          { id: "flutter_basic_database", name: "Database Integration", price: 100 },
+          { id: "flutter_basic_google_signin", name: "Google Sign-In", price: 100 },
+          { id: "flutter_basic_check_update", name: "Check Update", price: 100 },
+        ]
+       },
+      { id: "flutter_store", name: "تطبيق متجر إلكتروني Flutter", price: 3000 },
+      { id: "flutter_restaurant", name: "تطبيق مطعم وطلبات (Client & Delivery)", price: 8000 },
+      { id: "flutter_api", name: "ربط التطبيق بـ REST API الخارجية", price: 1500 },
+      { id: "play_store", name: "رفع التطبيق على Google Play و App Signing", price: 2000 }
     ]
   },
   {
     categoryName: "قواعد البيانات SQL Server",
     items: [
-      { id: "schema", name: "تصميم Database Schema", price: 1500 },
-      { id: "sql_tables", name: "إنشاء الجداول والعلاقات", price: 1000 },
-      { id: "sql_queries", name: "كتابة SQL Queries", price: 500 },
-      { id: "stored", name: "كتابة Stored Procedures", price: 500 },
-      { id: "sql_backup", name: "Database Backup & Restore", price: 500 },
-      { id: "db_migration", name: "نقل قاعدة البيانات", price: 500 },
-      { id: "sql_server", name: "إعداد SQL Server", price: 1000 },
-      { id: "ef_database", name: "ربط EF Core بقاعدة البيانات", price: 750 }
+      { id: "schema", name: "تصميم Database Schema وهندسة الجداول", price: 1000 },
+      { id: "sql_tables", name: "إنشاء الجداول والعلاقات والقيود Constraints", price: 1000 },
+      { id: "stored", name: "كتابة وتحسين Stored Procedures المعقدة", price: 1500 },
+      { id: "sql_backup", name: "إعداد استراتيجيات Backup & Restore", price: 1000 },
+      { id: "db_migration", name: "نقل وترحيل قواعد البيانات", price: 1500 },
+      { id: "sql_server", name: "تثبيت وإعداد SQL Server وصلاحياته", price: 1500 },
+      { id: "ef_database", name: "ربط وتكوين EF Core مع قاعدة البيانات", price: 1500 }
     ]
   }
 ];

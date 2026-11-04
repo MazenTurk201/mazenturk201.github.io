@@ -26,6 +26,5 @@ export default function skill({ title, tags, icon, percent, color, ImgStyle }: {
     {IconBody}
     <div className='spliter not-sm:hidden'></div>
     {ContentBody}
-    <svg className="absolute left-[0.15em] right-[0.15em] bottom-0" height="20" viewBox="0 0 200 20" preserveAspectRatio="none" fill="none" style={{width: 'calc(100% - 0.3em)'}}><path d="M2 14 Q 30 4 60 12 T 120 10 T 198 14" stroke="url(#scribbleGrad)" stroke-width="4" stroke-linecap="round" fill="none"></path><defs><linearGradient id="scribbleGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#A855F7"></stop><stop offset="100%" stop-color="#190143"></stop></linearGradient></defs></svg>
   </div>
 }
